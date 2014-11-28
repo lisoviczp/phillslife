@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>phills life</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<style>
+
+h1 {
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
+</style>
+
+
+<body>
+
+<ul>
+  <li class="nav"> <%= link_to 'home', root_path %></li> &nbsp | &nbsp
+  <li class="nav"> <%= link_to 'songs', songs_path %></li> &nbsp | &nbsp
+  <li class="nav"> <%= link_to 'about', about_index_path %></li> &nbsp | &nbsp
+  <li class="nav"> <a href="https://www.linkedin.com/pub/phil-lisovicz/21/a82/264"> linked in </a></li> &nbsp | &nbsp
+  <li class="nav"> <a href="https://soundcloud.com/phillslife"> soundcloud </a></li>
+</ul>
+
+
+<%= yield %>
+
+</body>
+</html>

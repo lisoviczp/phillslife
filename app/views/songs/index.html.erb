@@ -1,0 +1,32 @@
+<style>
+
+.background_image {
+	border-bottom: solid;
+	border-width: 3px;
+	padding-bottom: 3px;
+}
+
+
+</style>
+
+
+
+<h1>all-timers</h1>
+<h3> <%= link_to 'current', songs_current_path %> </h3>
+
+<div class="background_image">
+    <img src="/assets/Nantucket_Pan.JPG" alt="Nantucket" style="width:100%;height:400px;">
+</div>
+
+<% @song.reverse.each do |song| %>
+	<% if song == @song.reverse.first %>
+		<div class="firstPost">
+			<iframe width="100%" height="450" scrolling="no" frameborder="no" src=  <%= %Q"#{song.url}" %> ></iframe>
+		</div>
+		<br>
+	<% else %>
+		<div class="posts">
+			<iframe width="100%" height="450" scrolling="no" frameborder="no" src=  <%= %Q"#{song.url}" %> ></iframe>
+		</div>
+	<% end %>	
+<% end %>
