@@ -37,6 +37,11 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'paperclip'
+gem 'mini_exiftool_vendored'
+gem 'aws-sdk'
+gem 'simple_form'
+
 
 group :development do
 	gem 'pry-rails'
