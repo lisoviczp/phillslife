@@ -1,3 +1,5 @@
+
+gem 'dotenv-rails', :groups => [:development, :test]
 source 'https://rubygems.org'
 
 
@@ -41,7 +43,6 @@ gem 'paperclip'
 gem 'mini_exiftool_vendored'
 gem 'aws-sdk'
 gem 'simple_form'
-
 
 group :development do
 	gem 'pry-rails'
