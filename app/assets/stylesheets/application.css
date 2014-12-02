@@ -223,5 +223,17 @@ a:active {
 .button:active {
    border-top-color: #1b435e;
    background: #1b435e;
-   }
+}
+
+
+.testimages {
+	display: inline-block;
+}
+
+img.testimages {
+	display: inline-block;
+	margin: 0 auto;
+	margin-left: 500px;
+	max-width: 100%;
+}
 

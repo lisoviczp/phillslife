@@ -1,27 +1,20 @@
 <!DOCTYPE html>
-<style>
+<html>
 
-table {
-	margin:0.5%;
-}
+<head>
+    <style>
 
-td {
-    padding: 3px;
-}
+    table {
+        margin:0.5%;
+    }
 
-img {
-    max-width: 100%;
-    /*height: auto;*/
-    /*width: auto\9; /* ie8 */
-}
+    td {
+        padding: 3px;
+    }
 
+    </style>
 
-
-</style>
-<!-- 
-<script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/lightbox.min.js"></script>
-<link href="css/lightbox.css" rel="stylesheet" /> -->
+</head>
 
 <body> 
 
@@ -43,20 +36,28 @@ img {
 <!-- <div class="gifs">
 	 <img src="/assets/catgun.gif" alt="CatGun">
 	 <img src="/assets/neat.gif" alt="Bird">
-</div>
- -->
+</div> -->
+
 
 <h2><%= link_to 'upload image / gif', new_picture_path %></h2>
 
+<table> 
 <% Picture.all.reverse.each do |pic| %>
-    <a href=<%= %Q"#{pic.image.url}" %> data-lightbox="French Alps"> 
-        <img src=<%= %Q"#{pic.image.url}" %> alt= <% pic.title %> width="615" height="350" >
-    </a>
-
-
+    <div class="testimages">
+            <tr>
+                <td>
+                    <a href=<%= %Q"#{pic.image.url}" %>> 
+                        <img src=<%= %Q"#{pic.image.url}" %> alt= <% pic.title %> width="615" height="350" >
+                </td>
+            </tr>
+        </a>
+    </div>
+    </br>
 <% end %>
+</table>
 
 </body>
 
+</html>
 
 
