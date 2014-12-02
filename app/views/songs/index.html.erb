@@ -1,14 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
 <style>
 
 .background_image {
-	border-bottom: solid;
+	/*border-bottom: solid;*/
 	border-width: 3px;
-	padding-bottom: 3px;
+	/*padding-bottom: 1px;*/
 }
 
 
 </style>
+</head>
 
+<body>
 
 <h1>all-timers</h1>
 <h3> <%= link_to 'current', songs_current_path %> </h3>
@@ -27,6 +35,10 @@
 		<div class="posts">
 			<iframe width="100%" height="450" scrolling="no" frameborder="no" src=  <%= %Q"#{song.url}" %> ></iframe>
 		</div>
+		<br>
 	<% end %>	
-	<br>
 <% end %>
+
+</body>
+
+</html>
