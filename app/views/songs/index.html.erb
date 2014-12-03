@@ -3,7 +3,6 @@
 
 <head>
 
-
 <style>
 
 .background_image {
@@ -25,18 +24,17 @@
     <img src="http://s3.amazonaws.com/phillslife-assets/pictures/images/000/000/002/original/Nantucket_Pan.JPG?1417479373" alt="Nantucket" style="width:100%;height:400px;">
 </div>
 
+<p class="firstTextPost">
+posting some of my all time favorite music. if a song makes this list it's not coming off.
+</p>
+
+<hr>
+
 <% @song.reverse.each do |song| %>
-	<% if song == @song.reverse.first %>
-		<div class="firstPost">
-			<iframe width="100%" height="450" scrolling="no" frameborder="no" src=  <%= %Q"#{song.url}" %> ></iframe>
-		</div>
-		<br>
-	<% else %>
 		<div class="posts">
 			<iframe width="100%" height="450" scrolling="no" frameborder="no" src=  <%= %Q"#{song.url}" %> ></iframe>
 		</div>
 		<br>
-	<% end %>	
 <% end %>
 
 </body>

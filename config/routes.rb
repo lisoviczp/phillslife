@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
-  get 'pictures' => 'home#index'
+  # get 'pictures' => 'home#index'
 
   root 'home#index'
 

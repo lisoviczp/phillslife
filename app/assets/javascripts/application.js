@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// $('.lightbox').lightbox({ parent: "body"}); trying to fix lightbox
+

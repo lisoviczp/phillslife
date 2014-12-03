@@ -13,9 +13,14 @@
  *= require_tree .
  *= require_self
  */
+/*
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<link href="css/lightbox.css" rel="stylesheet" />*/
 
 body {
-	background-color: #0085ca;
+	background-color: #cee2f8; 
+	/*background-color: #0085ca; good blue*/
 	padding-bottom: 20px;
 	border-bottom: 1px solid transparent;
 }
@@ -40,7 +45,7 @@ h2 {
 	font-family: helvetica;
 	font-weight: 100;
 	font-size: 20px;
-	color: white;
+	color: #0085ca;
 	text-transform: lowercase;
 
 	/*top: 115px;*/
@@ -58,7 +63,7 @@ h3 {
 	font-family: helvetica;
 	font-weight: 100;
 	font-size: 25px;
-	color: white;
+	color: #0085ca;
 	top: 115px;
 	
 	/*position center*/
@@ -72,7 +77,9 @@ h3 {
 p {
 	font-family: helvetica;
 	font-weight: 100;
-	color: white;
+	color: #0085ca;
+	text-align: center;
+	color: #0085ca;
 }
 
 .firstPost {
@@ -81,6 +88,15 @@ p {
 	width: 100%;
 	height: 90px;
 	z-index: 1;
+}
+
+.firstTextPost {
+	position: absolute;
+	top: 265px;
+	width: 100%;
+	height: 90px;
+	z-index: 1;
+	color: white;
 }
 
 iframe {
@@ -112,24 +128,18 @@ ul {
 
 }
 
-p {
-	text-align: center;
-	color: white;
-}
-
 li {
 	display: inline;
-	color: white;
 }
 
 a {
-	font-family: Optima;
+	font-family: helvetica;
+	font-weight: 100;
 	font-weight: 0;
 	text-align: center;
 }
 
 a:link {
-	color: white;
 	text-decoration: none;
 	text-align: center;
 }
@@ -237,3 +247,6 @@ img.testimages {
 	max-width: 100%;
 }
 
+.uploadImage {
+	color: #0085ca;
+}
