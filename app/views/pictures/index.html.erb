@@ -14,12 +14,13 @@
 </div>
 <br>
 
+<div class="pic-container">
 
-<% Picture.all.reverse.each do |pic| %>
-    <div class="testimages">
-        <a href=<%= %Q"#{pic.image.url}" %>> 
-            <img src=<%= %Q"#{pic.image.url}" %> alt= <% pic.title %> width="615" height="350" >
-        </a>
-    </div>
-    <hr>
-<% end %>
+	<% Picture.all.reverse.each do |pic| %>
+	        <a class="postImage" href=<%= %Q"#{pic.image.url}" %>>
+	            <img src=<%= %Q"#{pic.image.url}" %> alt= <% pic.title %> width="350" h>
+	        </a>
+
+	<% end %>
+
+</div>

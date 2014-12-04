@@ -3,7 +3,14 @@
 <br>
 <br>
 
-<%= image_tag @picture.image.url, width: 600 %><br>
 
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
+<div class="pic-container">
+
+	<div class="postImage"> <%= image_tag @picture.image.url, width: 600 %> </div>
+
+	<%= link_to 'Edit', edit_picture_path(@picture) %> |
+	<%= link_to 'Back', pictures_path %> |
+	<%= link_to 'Delete', method: :delete %><br>
+
+</div>
+

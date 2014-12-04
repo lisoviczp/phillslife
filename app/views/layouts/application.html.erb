@@ -20,19 +20,36 @@
   h3 {
     text-align: center;
   }
+
   </style>
+
+
+  <link rel="shortcut icon" href="/assets/faviconPL.ico" type="image/x-icon" />
 
 </head>
 
 <body>
 
-<ul>
-  <li class="nav"> <%= link_to 'home', root_path %></li> &nbsp | &nbsp
-  <li class="nav"> <%= link_to 'songs', songs_path %></li> &nbsp | &nbsp
-  <li class="nav"> <%= link_to 'about', about_index_path %></li> &nbsp | &nbsp
-  <li class="nav"> <a href="https://www.linkedin.com/pub/phil-lisovicz/21/a82/264"> linked in </a></li> &nbsp | &nbsp
-  <li class="nav"> <a href="https://soundcloud.com/phillslife"> soundcloud </a></li>
-</ul>
+  <div class="nav">
+    <ul>
+      <li id="words"><%= link_to 'home', root_path %></li>
+      <li id="words"><%= link_to 'songs', songs_path %></li> 
+      <li id="words"><%= link_to 'about', about_index_path %></li> 
+      <li id="words"> <a href="https://www.linkedin.com/pub/phil-lisovicz/21/a82/264"> linkedin 
+      </a></li> 
+      <li id="logo"><iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fphillslife&color=orange_transparent" style="width:60px;height: 38px; text-align: center; top: 0;"></iframe> </li>
+    </ul>
+  </div>
+
+<!--     <div class="nav">
+      <ul>
+        <li id="words"><a href="#">home</a></li> 
+        <li id="words"><a href="#">music</a></li> 
+        <li id="words"><a href="#">about</a></li> 
+        <li id="words"><a href="#">contact</a></li> 
+        <li id="logo"><iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fphillslife&color=orange_transparent" style="width:60px;height: 38px; text-align: center; top: 0;"></iframe> </li>
+      </ul>
+    </div> -->
 
 
 <%= yield %>
