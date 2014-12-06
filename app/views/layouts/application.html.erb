@@ -2,16 +2,6 @@
 <html>
 <head>
   <title>phills life</title>
-  
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag "lightbox" %>
-  <%= csrf_meta_tags %>
-<!-- 
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <script src="js/lightbox.min.js"></script>
-  <link href="css/lightbox.css" rel="stylesheet" /> -->
-
   <style>
   h1 {
     text-align: center;
@@ -23,6 +13,13 @@
 
   </style>
 
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <link href="css/lightbox.css" rel="stylesheet" />
 
   <link rel="shortcut icon" href="/assets/faviconPL.ico" type="image/x-icon" />
 
@@ -40,17 +37,6 @@
       <li id="logo"><iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fphillslife&color=orange_transparent" style="width:60px;height: 38px; text-align: center; top: 0;"></iframe> </li>
     </ul>
   </div>
-
-<!--     <div class="nav">
-      <ul>
-        <li id="words"><a href="#">home</a></li> 
-        <li id="words"><a href="#">music</a></li> 
-        <li id="words"><a href="#">about</a></li> 
-        <li id="words"><a href="#">contact</a></li> 
-        <li id="logo"><iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fphillslife&color=orange_transparent" style="width:60px;height: 38px; text-align: center; top: 0;"></iframe> </li>
-      </ul>
-    </div> -->
-
 
 <%= yield %>
 

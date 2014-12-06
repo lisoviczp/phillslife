@@ -11,6 +11,10 @@
     
     </style>
 
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <link href="css/lightbox.css" rel="stylesheet" />
+
 </head>
 
 <body> 
@@ -29,7 +33,7 @@
 </div>
 
 
-<h2 class="uploadImage"><%= link_to 'upload image / gif', new_picture_path %></h2>
+<h2 class="uploadImage"><%= link_to 'upload', new_picture_path %></h2>
 
 <div class="pic-container">
 
@@ -87,7 +91,7 @@
         </a>
 
         <% Picture.all.reverse.each do |pic| %>
-            <a class="postImage" href=<%= %Q"#{pic.image.url}" %>>
+            <a class="postImage" href=<%= %Q"#{pic.image.url}" %> data-lightbox=<%= %Q"#{pic.title}" %>>
                 <img src=<%= %Q"#{pic.image.url}" %> alt= <% pic.title %> width="350" h>
             </a>
         <% end %>
@@ -101,7 +105,7 @@
         </a>
 
         <a class="postImage" href="/assets/3dart.jpg" data-lightbox="3DArt"> 
-            <img src="/assets/3dart.jpg" alt="3D Art" width="350" eight="550">
+            <img src="/assets/3dart.jpg" alt="3D Art" width="350" height="550">
         </a>
 
         <a class="postImage" href="/assets/irone throne.jpg" data-lightbox="Iron Throne"> 
@@ -144,10 +148,6 @@
             <img src="/assets/craterlakeoregon.jpeg" alt="Crater Lake Oregon" width="350" >
         </a>
 
-        <a class="postImage" href="/assets/pakistan3.jpg" data-lightbox="Pakistan"> 
-            <img src="/assets/pakistan3.jpg" alt="Pakistan Mountains" width="350" >
-        </a>
-
         <a class="postImage" href="/assets/lake.jpg" data-lightbox="lake"> 
             <img src="/assets/lake.jpg" alt="Lake" width="350" >
         </a>
@@ -160,9 +160,6 @@
             <img src="/assets/londonn.jpg" alt="London Night" width="350" >
         </a>
 
-        <a class="postImage" href="/assets/pakistan2.jpg" data-lightbox="Pakistan"> 
-            <img src="/assets/pakistan2.jpg" alt="Pakistan River and Mountains" width="350" >
-        </a>       
 
 </div>
 

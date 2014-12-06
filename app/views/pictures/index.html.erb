@@ -3,6 +3,10 @@
 
 <head>
 
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <link href="css/lightbox.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -17,10 +21,12 @@
 <div class="pic-container">
 
 	<% Picture.all.reverse.each do |pic| %>
-	        <a class="postImage" href=<%= %Q"#{pic.image.url}" %>>
-	            <img src=<%= %Q"#{pic.image.url}" %> alt= <% pic.title %> width="350" h>
+	        <a class="postImage" href=<%= pic.image.url %> data-lightbox="Test">
+	            <img src=<%= pic.image.url %> alt= <% pic.title %> width="350">
 	        </a>
-
 	<% end %>
 
 </div>
+
+</body>
+</html>
