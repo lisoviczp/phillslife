@@ -15,12 +15,14 @@
 
 <div class="pic-container">
 
-	<div class="postImage"> <%= image_tag @picture.image.url, width: 600 %> </div>
+	<div class="one-image"> <%= image_tag @picture.image.url, width: 600 %> <br>
 
-	<%= link_to 'edit', edit_picture_path(@picture) %> |
-	<%= link_to 'back', pictures_path %> |
-	<%= link_to 'delete', method: :delete %><br>
-
+	<p>
+	<!-- <%= link_to 'edit', edit_picture_path(@picture) %> -->
+    <%= link_to 'back', pictures_path %> </p>
+	<!-- <% link_to 'delete', method: :delete %><br> -->
+	</p>
+	</div>
 </div>
 
 </body>

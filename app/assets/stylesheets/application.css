@@ -12,12 +12,10 @@
  *
  *= require_tree .
  *= require_self
- */
-/*
-<script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/lightbox.min.js"></script>
-<link href="css/lightbox.css" rel="stylesheet" />*/
+ *= require lightbox
 
+
+/*all CSS done by me :)*/
 body {
 	background-color: #cee2f8; 
 	/*background-color: #0085ca; good blue*/
@@ -151,6 +149,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
 }
 
 li {
@@ -163,10 +162,6 @@ li {
   display: block;
   width: 60px;
   font-family: helvetica;
-  color: rgb(90,90,90);
-}
-
-.nav {
   position: fixed;
   top: 0;
   left:0;
@@ -182,11 +177,12 @@ li {
   height:38px;
   vertical-align: center;
   z-index: 100;
+  color: rgb(90,90,90);
 }
 
 .nav #words {
   padding: 7px;
-
+  color: rgb(90,90,90);
 }
 
 .nav #logo {
@@ -200,7 +196,7 @@ li {
 .nav #words:link {
   text-decoration: none;
   font-weight: 0;
-  text-decoration: none;
+  color: rgb(90,90,90);
 }
 
 .nav #words:visited {
@@ -217,6 +213,10 @@ li {
 .nav #words:active {
   color: rgb(90,90,90);
   text-decoration: none;
+}
+
+.nav #words:visited {
+  color: rgb(90,90,90);
 }
 
 
@@ -236,11 +236,6 @@ a:hover {
 
 a:active {
   color: rgb(90,90,90);
-}
-
-#cv {
-	text-align: center;
-	color: white;
 }
 
 
@@ -317,5 +312,19 @@ img.testimages {
 	margin-left: 2%;
 	/*margin-right: 2%;*/
 	background-color: #cee2f8; 
+}
+
+.one-image {
+	position: absolute;
+	top: 50px;
+	margin-left: 25%;
+	background-color: #cee2f8; 
+	max-width: 100%;
+	/*box-shadow:2px 2px 2px #888888;*/
+}
+
+.cv {
+	text-align: center;
+	color: white;
 }
 
