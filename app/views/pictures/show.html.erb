@@ -1,29 +1,60 @@
 <!DOCTYPE html>
-<html>
 
-<head>
+<style>
+	.pic-show-container {
+		background-color: #cee2f8;
+		z-index: -100;
+		/*position: absolute;*/
+		width: 100%;
+	}
 
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <script src="js/lightbox.min.js"></script>
-  <link href="css/lightbox.css" rel="stylesheet" />
+	.image-show {
+		/*float: left;*/
+		left: 33%;
+		margin-left: 25%;
+		z-index: 100;
+		width: 33%;
+	}
 
-</head>
+	#pic-words-beneath {
+		margin-left: 50%;
+	}
 
-<br>
+	.image-show img {
+		max-width: 100%;
+		box-shadow:2px 2px 2px #888888;
+		margin: 5px;
+		/*width: 33%;*/
+	}
+
+
+</style>
 
 <body>
 
-<div class="pic-container">
+</br>
+</br>
+</br>
 
-	<div class="one-image"> <%= image_tag @picture.image.url, width: 600 %> <br>
-
-	<p>
-	<!-- <%= link_to 'edit', edit_picture_path(@picture) %> -->
-    <%= link_to 'back', pictures_path %> </p>
-	<!-- <% link_to 'delete', method: :delete %><br> -->
+<div class="pic-show-container">
+	<p id="pic-words-beneath">
+		<%= @picture.title %>
 	</p>
+	<div class="image-show">
+		<%= image_tag @picture.image.url %> </br>
+	<p id="pic-words-beneath">
+
+	<!-- <%= link_to 'edit', edit_picture_path(@picture) %> -->
+    <%= link_to 'back', root_path %> 
+	<!-- <% link_to 'delete', method: :delete %><br> --> </p>
+
+	</p>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
 	</div>
+
 </div>
 
-</body>
-</html>
