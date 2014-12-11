@@ -187,6 +187,10 @@ li {
   color: rgb(90,90,90);
 }
 
+#words {
+  color: rgb(90,90,90);
+}
+
 .nav #logo {
   display: block;
   /*padding-left: 14px;*/
@@ -207,6 +211,14 @@ li {
   text-decoration: none;
 }
 
+#words:visited {
+  color: rgb(90,90,90);
+}
+
+#words:active {
+  color: rgb(90,90,90);
+}
+
 .nav #words:hover {
   opacity: 0.4;
   text-decoration: none;
@@ -215,12 +227,12 @@ li {
 .nav #words:active {
   color: rgb(90,90,90);
   text-decoration: none;
+  font-size: 40px;
 }
 
 .nav #words:visited {
   color: rgb(90,90,90);
 }
-
 
 a:link {
   text-decoration: none;
@@ -239,18 +251,6 @@ a:hover {
 a:active {
   color: rgb(90,90,90);
 }
-
-
-/*.testimages {
-	display: inline-block;
-}
-
-img.testimages {
-	display: inline-block;
-	margin: 0 auto;
-	margin-left: 500px;
-	max-width: 100%;
-}*/
 
 .uploadImage {
 	color: #0085ca;

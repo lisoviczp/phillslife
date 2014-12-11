@@ -21,6 +21,15 @@
   opacity: 0.60;
 }
 
+.my-form {
+  width: 33%;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  left: 33%;
+  z-index: 300;
+}
+
 </style>
 </head>
 <body>
@@ -31,36 +40,45 @@
 
 <h3> submit a picture or gif </h3>
 
-<%= form_for(@picture) do |f| %>
-  <% if @picture.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
+<div class="my-form">
+  <%= form_for(@picture) do |f| %>
+    <% if @picture.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
 
-      <ul>
-      <% @picture.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @picture.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="new-picture">
+      <div class="field">
+        <%= f.text_field :title, placeholder: 'name it' %>
+      </div>
+
+      <div class="field">
+        <%= f.file_field :image, description: 'choose file', label: 'choose file' %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit 'submit' %>
+      </div>
+
     </div>
   <% end %>
-
-  <div class="new-picture">
-    <div class="field">
-      <%= f.text_field :title %>
-    </div>
-
-    <div class="field">
-      <%= f.file_field :image %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-
-  </div>
-
-
-<% end %>
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 
 </body>
 </html>

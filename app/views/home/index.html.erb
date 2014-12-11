@@ -35,13 +35,20 @@
 
 <div class="pic-container">
 
-
         <a class="postImage" href="/assets/Durdle-Door-sunrise.jpg" data-lightbox="Durdle Door Sunrise"> 
             <img src="/assets/Durdle-Door-sunrise.jpg" alt="Durdle Door Sunrise" width="350" >
         </a>
 
-        <a class="postImage" href="/assets/neat.gif" data-lightbox="neat"> 
-            <img src="/assets/neat.gif" alt="neat" width="350" >
+        <a class="postImage" href="/assets/indoorpool.gif" data-lightbox="indoorpool"> 
+            <img src="/assets/indoorpool.gif" alt="indoorpool" width="350" >
+        </a>
+
+        <a class="postImage" href="/assets/funnyseals.jpg" data-lightbox="funnyseals"> 
+            <img src="/assets/funnyseals.jpg" alt="funnyseals" width="350" >
+        </a>
+
+        <a class="postImage" href="/assets/panda.gif" data-lightbox="panda"> 
+            <img src="/assets/panda.gif" alt="panda" width="350" >
         </a>
 
         <a class="postImage" href="/assets/mtgongga.jpg" data-lightbox="lake"> 
@@ -56,46 +63,55 @@
             <img src="/assets/mtgenie.jpg" alt="Mt Genie" width="350" >
         </a>
 
+        <a class="postImage" href="/assets/TexasStorm.jpg" data-lightbox="TexasStorm"> 
+            <img src="/assets/TexasStorm.jpg" alt="TexasStorm" width="350" >
+        </a>
+
         <a class="postImage" href="/assets/NewZealand.jpg" data-lightbox="New Zealand"> 
             <img src="/assets/NewZealand.jpg" alt="New Zealand Ocean" width="350" >
-        </a>
-
-        <a class="postImage" href="/assets/coolhighway.jpg" data-lightbox="Cool Highway"> 
-            <img src="/assets/coolhighway.jpg" alt="Highway Architecture" width="350" >
-        </a>
-
-        <a class="postImage" href="/assets/bearcrawl.gif" data-lightbox="bearcrawl"> 
-            <img src="/assets/bearcrawl.gif" alt="bearcrawl" width="350" >
         </a>
 
         <a class="postImage" href="/assets/frenchalps.jpg" data-lightbox="French Alps"> 
             <img src="/assets/frenchalps.jpg" alt="French Alps" width="350" >
         </a>
 
-        <a class="postImage" href="/assets/watergif.gif" data-lightbox="watergif"> 
-            <img src="/assets/watergif.gif" alt="watergif" width="350" >
+        <a class="postImage" href="/assets/chinariver.jpg" data-lightbox="chinariver"> 
+            <img src="/assets/chinariver.jpg" alt="chinariver" width="350" >
         </a>
 
         <a class="postImage" href="/assets/italy.jpg" data-lightbox="Italy"> 
             <img src="/assets/italy.jpg" alt="Italy Countryside" width="350" >
         </a>
 
-        <a class="postImage" href="/assets/coolneon.gif" data-lightbox="3dgif"> 
-            <img src="/assets/coolneon.gif" alt="3dgif" width="350" >
+        <a class="postImage" href="/assets/snowybench.gif" data-lightbox="snowybench"> 
+            <img src="/assets/snowybench.gif" alt="snowybench" width="350" >
         </a>        
+
+
+        <a class="postImage" href="/assets/borabora.jpg" data-lightbox="borabora"> 
+            <img src="/assets/borabora.jpg" alt="borabora" width="350" >
+        </a>
 
         <a class="postImage" href="/assets/catgun.gif" data-lightbox="catgun"> 
             <img src="/assets/catgun.gif" alt="catgun" width="350" >
         </a>
 
         <% Picture.all.reverse.each do |pic| %>
-            <a class="postImage" href=<%= %Q"#{pic.image.url}" %> data-lightbox=<%= %Q"#{pic.title}" %>>
-                <img src=<%= %Q"#{pic.image.url}" %> alt= <% pic.title %> width="350" h>
+            <a class="postImage" href=<%= "#{pic.image.url}" %> data-lightbox=<%= "#{pic.title}" %>>
+                <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %> width="350" >
             </a>
         <% end %>
 
         <a class="postImage" href="/assets/mz.jpg" data-lightbox="MZ"> 
             <img src="/assets/mz.jpg" alt="MZ" width="615" width="350" >
+        </a>
+
+        <a class="postImage" href="/assets/bearcrawl.gif" data-lightbox="bearcrawl"> 
+            <img src="/assets/bearcrawl.gif" alt="bearcrawl" width="350" >
+        </a>
+
+        <a class="postImage" href="/assets/colorado.jpg" data-lightbox="colorado"> 
+            <img src="/assets/colorado.jpg" alt="colorado" width="350" >
         </a>
 
         <a class="postImage" href="/assets/hawaii.jpg" data-lightbox="Hawaii"> 
@@ -105,6 +121,14 @@
         <a class="postImage" href="/assets/3dart.jpg" data-lightbox="3DArt"> 
             <img src="/assets/3dart.jpg" alt="3D Art" width="350" height="550">
         </a>
+
+        <a class="postImage" href="/assets/coolhighway.jpg" data-lightbox="Cool Highway"> 
+            <img src="/assets/coolhighway.jpg" alt="Highway Architecture" width="350" >
+        </a>
+
+        <a class="postImage" href="/assets/coolneon.gif" data-lightbox="coolneon"> 
+            <img src="/assets/coolneon.gif" alt="coolneon" width="350" >
+        </a>        
 
         <a class="postImage" href="/assets/irone throne.jpg" data-lightbox="Iron Throne"> 
             <img src="/assets/irone throne.jpg" alt="Iron Throne" width="350" height="550" >
@@ -130,6 +154,14 @@
             <img src="/assets/rockswater.jpg" alt="Rocky Ocean" width="350" >
         </a>
 
+        <a class="postImage" href="/assets/watergif.gif" data-lightbox="watergif"> 
+            <img src="/assets/watergif.gif" alt="watergif" width="350" >
+        </a>
+
+        <a class="postImage" href="/assets/mountainsunset.jpg" data-lightbox="mountainsunset"> 
+            <img src="/assets/mountainsunset.jpg" alt="mountainsunset" width="350" >
+        </a>
+
         <a class="postImage" href="/assets/fallenwolf.jpg" data-lightbox="Wolf"> 
             <img src="/assets/fallenwolf.jpg" alt="Wolf" width="350" height="550">
         </a>
@@ -150,12 +182,12 @@
             <img src="/assets/lake.jpg" alt="Lake" width="350" >
         </a>
 
-        <a class="postImage" href="/assets/pakistan1.jpg" data-lightbox="Pakistan"> 
-            <img src="/assets/pakistan1.jpg" alt="Pakistan View" width="350" >
+        <a class="postImage" href="/assets/neat.gif" data-lightbox="neat"> 
+            <img src="/assets/neat.gif" alt="neat" width="350" >
         </a>
 
-        <a class="postImage" href="/assets/londonn.jpg" data-lightbox="London"> 
-            <img src="/assets/londonn.jpg" alt="London Night" width="350" >
+        <a class="postImage" href="/assets/mountainsun.jpg" data-lightbox="mountainsun"> 
+            <img src="/assets/mountainsun.jpg" alt="mountainsun View" width="350" >
         </a>
 </div>
 
