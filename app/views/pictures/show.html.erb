@@ -1,10 +1,8 @@
-<!DOCTYPE html>
 
 <style>
 	.pic-show-container {
 		background-color: #cee2f8;
 		z-index: -100;
-		/*position: absolute;*/
 		width: 100%;
 	}
 
@@ -20,11 +18,14 @@
 		margin-left: 50%;
 	}
 
-	.image-show img {
-		max-width: 100%;
+	.image-show img {	
+		position: relative; 
+		margin-top: 0%; 
+		float: left;
+		margin-left: 33%;
+		margin-right: auto;
+		height: 500px;
 		box-shadow:2px 2px 2px #888888;
-		margin: 5px;
-		/*width: 33%;*/
 	}
 
 
@@ -37,24 +38,20 @@
 </br>
 
 <div class="pic-show-container">
-	<p id="pic-words-beneath">
-		<%= @picture.title %>
-	</p>
 	<div class="image-show">
 		<%= image_tag @picture.image.url %> </br>
+
 	<p id="pic-words-beneath">
-
-	<!-- <%= link_to 'edit', edit_picture_path(@picture) %> -->
-    <%= link_to 'back', root_path %> 
-	<!-- <% link_to 'delete', method: :delete %><br> --> </p>
-
+	    <%= link_to 'back', root_path %> 
+		<%= link_to 'delete', method: :delete %><br> 
 	</p>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</div>
 
+	</div>
 </div>
+
+</br>
+</br>
+</br>
+</br>
+</br>
 

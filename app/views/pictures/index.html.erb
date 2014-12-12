@@ -23,7 +23,7 @@
 <div class="pic-container">
 
 	<% Picture.all.reverse.each do |pic| %>
-	        <a class="postImage" href=<%= pic.image.url %> data-lightbox="Test">
+	        <a class="postImage" href=<%= pic.image.url %> data-lightbox="#{pic.id}">
 	            <img src=<%= pic.image.url %> alt= <% pic.title %> width="350">
 	        </a>
 	<% end %>
