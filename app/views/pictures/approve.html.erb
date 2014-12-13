@@ -1,0 +1,15 @@
+<h1> to be approved </h1>
+
+
+<p> to be approved </p>
+<br>
+<br>
+<br>
+<br>
+
+
+<% Picture.all.reverse.each do |pic| %>
+	<% if pic.approved == false %>
+            <img src=<%= pic.image.url %> width="350">
+    <% end %>
+<% end %>

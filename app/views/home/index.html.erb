@@ -97,9 +97,11 @@
         </a>
 
         <% Picture.all.reverse.each do |pic| %>
-            <a class="postImage" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
-                <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %> width="350" >
-            </a>
+            <% if pic.image.url %>
+                <a class="postImage" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
+                    <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %> width="350" >
+                </a>
+            <% end %>
         <% end %>
 
         <a class="postImage" href="/assets/mz.jpg" data-lightbox="MZ"> 

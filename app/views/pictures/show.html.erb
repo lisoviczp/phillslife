@@ -29,6 +29,27 @@
 	}
 
 
+	.pic-show-container-test {
+	    position: relative;
+	    width: 100%;
+	}
+
+/*			.dummy {
+	    padding-top: 100%;
+	}*/
+
+	.pic {
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+
+	    text-align:center; /* Align center inline elements */
+	    font: 0/0 a;
+	}
+
+
 </style>
 
 <body>
@@ -37,11 +58,11 @@
 </br>
 </br>
 
-<div class="pic-show-container">
-	<div class="image-show">
+<div class="pic-show-container-test">
+	<div class=".pic">
 		<%= image_tag @picture.image.url %> </br>
 
-	<p id="pic-words-beneath">
+	<p class="pic">
 	    <%= link_to 'back', root_path %> 
 		<%= link_to 'delete', method: :delete %><br> 
 	</p>

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   # get 'pictures' => 'home#index'
 
+  get 'pictures/approve' => 'pictures#approve'
+
   root 'home#index'
 
   resources :songs
