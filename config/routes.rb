@@ -12,8 +12,11 @@ Rails.application.routes.draw do
   # get 'pictures' => 'home#index'
 
   get 'pictures/approve' => 'pictures#approve'
+  get 'pictures/approve/:id' => 'pictures#approve'
 
   root 'home#index'
+
+  # map.resources :pictures, :collection => { :approved => :put }
 
   resources :songs
   resources :pictures

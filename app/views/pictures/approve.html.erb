@@ -1,15 +1,107 @@
+<head>
+
+<style>
+
+	.pic-show-container-test {
+	    position: relative;
+	    width: 100%;
+	}
+
+	.pic {
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+
+	    text-align:center; /* Align center inline elements */
+	    font: 0/0 a;
+	}
+
+	.pic img{
+	    height: 400px;
+	}
+
+
+</style>
+
+</head>
+
+
+
+<br>
+<br>
+<br>
+
 <h1> to be approved </h1>
 
 
-<p> to be approved </p>
+<br>
+<br>
+<br>
+<br>
+
+<div class="pic-show-container-test">
+	<div class="pic">
+		<img src=<%= @picture.image.url %> width="350">
+	</div>
+</div>
+		<% if @picture.approved == false %>
+		  <%= form_for(@picture) do |f| %>
+		        <%= f.check_box :approved %>
+		        <%= f.submit 'approve picture' %>
+		  <% end %>
+		<% end %>
+
+<!-- need to add some divs here.. 2 to be precise -->
+<br>
 <br>
 <br>
 <br>
 <br>
 
 
-<% Picture.all.reverse.each do |pic| %>
-	<% if pic.approved == false %>
-            <img src=<%= pic.image.url %> width="350">
-    <% end %>
-<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

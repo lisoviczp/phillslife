@@ -64,7 +64,11 @@ class PicturesController < ApplicationController
   end
 
   def approve
-
+    # TODO select pictures that are approved
+    # Picture.update_all(['approved=?', true], :id => params[:picture_ids])
+    @picture=Picture.find(params[:id])
+    # @picture.approved=true
+    # redirect_to pictures_path    
   end
 
 
@@ -76,7 +80,7 @@ class PicturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def picture_params
-      params.require(:picture).permit(:title, :image)
+      params.require(:picture).permit(:title, :image, :approved)
 
     end
 end
