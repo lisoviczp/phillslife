@@ -59,7 +59,7 @@
 
     <div class="new-picture">
       <div class="field">
-        <%= f.text_field :title, placeholder: 'name it' %>
+        <%= f.text_field :title %> <!-- , placeholder: 'name it' %> -->
       </div>
 
       <div class="field">
@@ -67,7 +67,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit 'submit' %>
+        <%= f.submit "Submit", data: { confirm: "your file has been submitted for approval" } %>
       </div>
 
     </div>

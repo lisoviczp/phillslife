@@ -1,5 +1,6 @@
 class Picture < ActiveRecord::Base
-	attr_accessor :title
+	attr_accessor :title, :approved
+
 	after_initialize :defaults
 
 	has_attached_file :image
@@ -8,6 +9,10 @@ class Picture < ActiveRecord::Base
 	def defaults
 		self.approved = false
 	end
+
+	def approvePicture
+		self.approved=true
+	end 
 
 
 end
