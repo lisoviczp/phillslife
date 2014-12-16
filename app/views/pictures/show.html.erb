@@ -53,6 +53,12 @@
 	    height: 400px;
 	}
 
+	#below-image {
+		font-size: 14px;
+		position: relative;
+		display: block;
+	}
+
 
 </style>
 
@@ -64,30 +70,36 @@
 
 <div class="pic-show-container-test">
 	<div class="pic">
-		<%= image_tag @picture.image.url %> </br>
-	<p>
+		<%= image_tag @picture.image.url %> </br> 
+	</div>
+	<p id="below-image">
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 	    <%= link_to 'back', root_path %> 
-		<%= link_to 'delete', method: :delete %><br> 
+		<%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %><br>
 	</p>
 
-	</div>
 </div>
 </br>
 </br>
 </br>
 </br>
-</br></br>
 </br>
-</br>
-</br>
-</br></br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-

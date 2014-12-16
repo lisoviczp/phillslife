@@ -1,6 +1,7 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
 
+
   # GET /pictures
   # GET /pictures.json
   def index
@@ -15,7 +16,7 @@ class PicturesController < ApplicationController
 
   # GET /pictures/new
   def new
-    @picture = Picture.new
+    @picture = Picture.new(picture_params) 
   end
 
   # GET /pictures/1/edit
@@ -56,11 +57,9 @@ class PicturesController < ApplicationController
   # DELETE /pictures/1
   # DELETE /pictures/1.json
   def destroy
+    @picture = Picture.find(params[:id])
     @picture.destroy
-    respond_to do |format|
-      format.html { redirect_to pictures_url, notice: 'Picture was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to root_path, notice: 'Picture Deleted'
   end
 
   def approve

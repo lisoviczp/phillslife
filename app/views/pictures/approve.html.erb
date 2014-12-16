@@ -23,6 +23,16 @@
 	}
 
 
+	#below-image {
+/*		font-size: 14px;
+		position: relative;
+		display: block;
+		text-align: center;
+		margin-left: 200px;*/
+		/*border: solid;*/
+	}
+
+
 </style>
 
 </head>
@@ -45,29 +55,22 @@
 	<div class="pic">
 		<img src=<%= @picture.image.url %> width="350">
 	</div>
+	<p id="below-image">
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	<% if @picture.approved == false %>
+	  <%= form_for(@picture) do |f| %>
+	        <%= f.check_box :approved %>
+	        <%= f.submit 'approve picture' %>
+	  <% end %>
+	<% end %>
+	</p>
 </div>
-		<% if @picture.approved == false %>
-		  <%= form_for(@picture) do |f| %>
-		        <%= f.check_box :approved %>
-		        <%= f.submit 'approve picture' %>
-		  <% end %>
-		<% end %>
-
-
-
-<!-- need to add some divs here.. 2 to be precise -->
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <br>
 <br>
@@ -77,10 +80,10 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
 
-<br>
-<br>
-<br>
 
 
 
