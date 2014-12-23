@@ -1,5 +1,5 @@
 class Picture < ActiveRecord::Base
-	attr_accessor :title, :approved
+	# attr_accessor :title, :approved this messed everything up!!
 
 	after_initialize :defaults
 

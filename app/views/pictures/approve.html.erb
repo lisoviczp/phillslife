@@ -24,6 +24,9 @@
 
 
 	#below-image {
+		font-size: 14px;
+		position: relative;
+		display: block;
 /*		font-size: 14px;
 		position: relative;
 		display: block;
@@ -32,12 +35,20 @@
 		/*border: solid;*/
 	}
 
+	.approve-pic {
+		margin-left: 4%;
+		/*position: relative;*/
+		display: block;
+		text-align: center;
+		margin-left: 200px;
+	}
+
 
 </style>
 
 </head>
 
-
+<body>
 
 <br>
 <br>
@@ -45,61 +56,47 @@
 
 <h1> to be approved </h1>
 
-
-<br>
-<br>
-<br>
-<br>
-
 <div class="pic-show-container-test">
 	<div class="pic">
-		<img src=<%= @picture.image.url %> width="350">
+		<%= image_tag @picture.image.url %> </br> 
 	</div>
 	<p id="below-image">
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
-	<% if @picture.approved == false %>
-	  <%= form_for(@picture) do |f| %>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+	    <%= link_to 'back', root_path %> 
+		<% link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %><br>
+	</p>
+
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+	  <%= simple_form_for(@picture) do |f| %>
 	        <%= f.check_box :approved %>
 	        <%= f.submit 'approve picture' %>
-	  <% end %>
-	<% end %>
-	</p>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    		<%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %>
+    	<% end %>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>

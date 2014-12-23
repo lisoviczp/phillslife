@@ -57,6 +57,7 @@
 		font-size: 14px;
 		position: relative;
 		display: block;
+		margin-top: 500px;
 	}
 
 
@@ -94,7 +95,7 @@
 </br>
 </br>
 	    <%= link_to 'back', root_path %> 
-		<%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %><br>
+		<% link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %><br>
 	</p>
 
 </div>
