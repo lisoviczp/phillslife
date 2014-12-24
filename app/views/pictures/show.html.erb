@@ -1,42 +1,11 @@
+<head>
 
 <style>
-	.pic-show-container {
-		background-color: #cee2f8;
-		z-index: -100;
-		width: 100%;
-	}
-
-	.image-show {
-		/*float: left;*/
-		left: 33%;
-		margin-left: 25%;
-		z-index: 100;
-		width: 33%;
-	}
-
-	#pic-words-beneath {
-		margin-left: 50%;
-	}
-
-	.image-show img {	
-		position: relative; 
-		margin-top: 0%; 
-		float: left;
-		margin-left: 33%;
-		margin-right: auto;
-		height: 500px;
-		box-shadow:2px 2px 2px #888888;
-	}
-
 
 	.pic-show-container-test {
 	    position: relative;
 	    width: 100%;
 	}
-
-/*			.dummy {
-	    padding-top: 100%;
-	}*/
 
 	.pic {
 	    position: absolute;
@@ -53,21 +22,37 @@
 	    height: 400px;
 	}
 
+
 	#below-image {
 		font-size: 14px;
 		position: relative;
 		display: block;
-		margin-top: 500px;
+/*		font-size: 14px;
+		position: relative;
+		display: block;
+		text-align: center;
+		margin-left: 200px;*/
+		/*border: solid;*/
+	}
+
+	.approve-pic {
+		margin-left: 4%;
+		/*position: relative;*/
+		display: block;
+		text-align: center;
+		margin-left: 200px;
 	}
 
 
 </style>
 
+</head>
+
 <body>
 
-</br>
-</br>
-</br>
+<br>
+<br>
+<br>
 
 <div class="pic-show-container-test">
 	<div class="pic">
@@ -104,3 +89,12 @@
 </br>
 </br>
 </br>
+	  <%= simple_form_for(@picture) do |f| %>
+	        <%= f.check_box :approved %>
+	        <%= f.submit 'approve picture' %>
+    		<%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %>
+    	<% end %>
+
+
+
+</body>

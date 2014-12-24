@@ -66,6 +66,7 @@ class PicturesController < ApplicationController
     # TODO select pictures that are approved
     # Picture.update_all(['approved=?', true], :id => params[:picture_ids])
     @picture=Picture.find(params[:id])
+    @picture.approvePicture
     # @picture.approved=true
     # redirect_to pictures_path    
   end
