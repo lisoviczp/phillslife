@@ -5,10 +5,11 @@
 	.pic-show-container-test {
 	    position: relative;
 	    width: 100%;
+	    border: 4px solid black;
 	}
 
 	.pic {
-	    position: absolute;
+	    position: relative;
 	    top: 0;
 	    bottom: 0;
 	    left: 0;
@@ -16,10 +17,13 @@
 
 	    text-align:center; /* Align center inline elements */
 	    font: 0/0 a;
+	    /*border: 4px solid black;*/
 	}
 
 	.pic img{
 	    height: 400px;
+	    border: 4px solid blue;
+	    position: relative;
 	}
 
 
@@ -33,6 +37,9 @@
 		text-align: center;
 		margin-left: 200px;*/
 		/*border: solid;*/
+		height: 100px;
+	    border: 4px solid green;
+	    vertical-align: middle;
 	}
 
 	.approve-pic {
@@ -54,47 +61,54 @@
 <br>
 <br>
 
-<div class="pic-show-container-test">
-	<div class="pic">
-		<%= image_tag @picture.image.url %> </br> 
+<div class="pic-container">
+	<div class="pic-show-container-test">
+		<div class="pic">
+			<%= image_tag @picture.image.url %> </br> 
+		</div>
+
+		<p id="below-image">
+		    <%= link_to 'back', root_path %> 
+			<%= simple_form_for(@picture) do |f| %>
+			    <%= f.check_box :approved %>
+			    <%= f.submit 'approve picture' %>
+				<%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %>
+			<% end %>
+		</p>
+
 	</div>
-	<p id="below-image">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-	    <%= link_to 'back', root_path %> 
-		<% link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %><br>
-	</p>
 
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
 </div>
-</br>
-</br>
-</br>
-</br>
-</br>
-	  <%= simple_form_for(@picture) do |f| %>
-	        <%= f.check_box :approved %>
-	        <%= f.submit 'approve picture' %>
-    		<%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %>
-    	<% end %>
-
 
 
 </body>
