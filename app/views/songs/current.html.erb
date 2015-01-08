@@ -29,7 +29,11 @@
 currently enjoyable tunes
 </p>
 
-<h2 class="h3link"><%= link_to 'all timers', songs_path %></h2>
+<h2 class="h3link"><%= link_to 'all timers', songs_path %>
+	<% if user_signed_in? %>
+		&nbsp | &nbsp <%= link_to 'new song', new_song_path %>
+	<% end %>
+</h2>
 
 <hr>
 
@@ -38,7 +42,7 @@ currently enjoyable tunes
 	<% Song.all.each do |song| %>
 		<% if song.url %>
 			<div class="posts">
-				<iframe scrolling="no" frameborder="no" src= <%= song.get_src%>></iframe>
+				<iframe scrolling="no" frameborder="no" src= <%= song.get_src %>></iframe>
 			</div>
 		<% end %>
 	<% end %>
