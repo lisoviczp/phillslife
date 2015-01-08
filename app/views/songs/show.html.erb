@@ -14,16 +14,19 @@
 
 
 <div class="firstPost">
-	<iframe width="100%" height="450" scrolling="no" frameborder="no" src=  <%= %Q"#{@song.url}" %> ></iframe>
+	<iframe width="100%" height="450" scrolling="no" frameborder="no" src=  <%= @song.get_src %> ></iframe>
 </div>
 
-
+<p>
  <%= link_to 'Delete', song_path(@song), method: :delete %> <br>
+</p>
 
-
+</br>
 </br>
 </br>
 </br>
 
 </body>
 </html>
+
+

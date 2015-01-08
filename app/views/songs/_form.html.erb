@@ -1,0 +1,55 @@
+<style>
+
+form {
+	text-align: center;
+}
+
+
+</style>
+
+<body> 
+
+<div id="wrapper">
+
+<h1> phills life </h1>
+
+
+<div class="background_image">
+    <img src="/assets/Nantucket_Pan.JPG" alt="Nantucket" style="width:100%;height:400px;">
+</div>
+
+
+
+<div class="firstPost">
+
+	<div class="my-form">
+	  <%= form_for(@song) do |f| %>
+
+	  	<%= f.text_field :url %>
+
+      <div class="actions">
+        <%= f.submit "submit" %>
+      </div>
+
+	  <% end %>
+	</div>
+
+</div>
+
+<!-- disabling upload for now -->
+
+
+
+
+</br>
+
+</br>
+
+</br>
+
+</br>
+
+</br>
+
+</br>
+</div>
