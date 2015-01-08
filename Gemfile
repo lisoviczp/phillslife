@@ -43,6 +43,7 @@ gem 'paperclip'
 gem 'mini_exiftool_vendored'
 gem 'aws-sdk'
 gem 'simple_form'
+gem 'devise'
 
 group :development do
 	gem 'pry-rails'

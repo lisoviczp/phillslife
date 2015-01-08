@@ -46,8 +46,12 @@
       <li id="words"><%= link_to 'music', songs_path %></li> 
       <li id="words"><%= link_to 'about', about_index_path %></li> 
       <li id="logo"><iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fphillslife&color=orange_transparent" style="width:60px;height: 38px; text-align: center; top: 0;"></iframe> </li>
+      <li id="words-right"> <%= link_to 'sign in', new_user_session_path %> </li>
     </ul>
   </div>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <%= yield %>
 
