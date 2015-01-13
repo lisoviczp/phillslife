@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 
 <head>
@@ -39,8 +39,8 @@ currently enjoyable tunes
 
 <div class="songs-masonry-test">
 
-	<% Song.all.each do |song| %>
-		<% if song.url %>
+	<% Song.all.reverse.map do |song| %>
+		<% if song.get_src %>
 			<div class="posts">
 				<iframe scrolling="no" frameborder="no" src= <%= song.get_src %>></iframe>
 			</div>
