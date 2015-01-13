@@ -39,13 +39,6 @@ currently enjoyable tunes
 
 <div class="songs-masonry-test">
 
-	<% Song.all.reverse.map do |song| %>
-		<% if song.get_src %>
-			<div class="posts">
-				<iframe scrolling="no" frameborder="no" src= <%= song.get_src %>></iframe>
-			</div>
-		<% end %>
-	<% end %>
 	
 	<div class="posts">
 		<iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/180553086&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
