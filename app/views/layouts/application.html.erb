@@ -49,7 +49,7 @@
       <% if user_signed_in? %>
         <li id="words-right"> <%= link_to 'sign out', destroy_user_session_path, method: :delete,  :confirm => 'Are you sure?'%> </li>
       <% else %>
-        <li id="words-right"> <%= link_to 'sign in', new_user_session_path %> </li>
+        <!-- <li id="words-right"> <%= link_to 'sign in', new_user_session_path %> </li> -->
       <% end %>
     </ul>
   </div>

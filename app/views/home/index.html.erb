@@ -10,10 +10,10 @@
     }
     
 
-body {
-    background: url('/assets/bamboo.jpg');
-    background-attachment: fixed;
-}
+    body {
+        background: url('/assets/bamboo.jpg');
+        background-attachment: fixed;
+    }
 
 
     </style>
@@ -22,148 +22,164 @@ body {
 
 <body> 
 
-<div id="wrapper">
 
 </br>
 <h1 id="title" style="color: #0085ca;"> phills life </h1>
 
-
-<div class="background_image">
-    <!-- <img src="/assets/Nantucket_Pan.JPG" alt="Nantucket" style="width:100%;height:400px;"> -->
-</div>
 <!-- 
-
-
-<div class="">
+<div class="background_image">
+    <img src="/assets/Nantucket_Pan.JPG" alt="Nantucket" style="width:100%;height:400px;">
+</div>
+ -->
+<!-- <div class="">
 	<iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170106476&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 </div> -->
 
 <!-- disabling upload for now -->
 <h2 class="uploadImage"><%= link_to 'upload', new_picture_path %></h2>
 
-<div class="pic-container">
+<div class="mainForm">
 
-        <a class="postImage" href="/assets/Durdle-Door-sunrise.jpg" data-lightbox="Durdle Door Sunrise"> 
-            <img src="/assets/Durdle-Door-sunrise.jpg" alt="Durdle Door Sunrise" width="350" >
-        </a>
 
-        <a class="postImage" href="/assets/indoorpool.gif" data-lightbox="indoorpool"> 
-            <img src="/assets/indoorpool.gif" alt="indoorpool" width="350" >
-        </a>
+<div id="container" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 320 }'>
 
-        <a class="postImage" href="/assets/funnyseals.jpg" data-lightbox="funnyseals"> 
-            <img src="/assets/funnyseals.jpg" alt="funnyseals" width="350" >
-        </a>
-
-        <a class="postImage" href="/assets/panda.gif" data-lightbox="panda"> 
-            <img src="/assets/panda.gif" alt="panda" width="350" >
-        </a>
-
-        <a class="postImage" href="/assets/presidentfightclub.jpg" data-lightbox="presidentfightclub"> 
-            <img src="/assets/presidentfightclub.jpg" alt="presidentfightclub" width="350" >
-        </a>        
-
-        <a class="postImage" href="/assets/3dgif.gif" data-lightbox="3dgif"> 
-            <img src="/assets/3dgif.gif" alt="3dgif" width="350" >
-        </a>
-
-        <a class="postImage" href="/assets/doghi.jpg" data-lightbox="doghi"> 
-            <img src="/assets/doghi.jpg" alt="doghi" width="350" >
-        </a>
-
-        <a class="postImage" href="/assets/TexasStorm.jpg" data-lightbox="TexasStorm"> 
-            <img src="/assets/TexasStorm.jpg" alt="TexasStorm" width="350" >
-        </a>
-
-        <a class="postImage" href="/assets/snowybench.gif" data-lightbox="snowybench"> 
-            <img src="/assets/snowybench.gif" alt="snowybench" width="350" >
-        </a>      
-
-        <a class="postImage" href="/assets/italy.jpg" data-lightbox="Italy"> 
-            <img src="/assets/italy.jpg" alt="Italy Countryside" width="350" >
-        </a>  
-
-        <a class="postImage" href="/assets/catgun.gif" data-lightbox="catgun"> 
-            <img src="/assets/catgun.gif" alt="catgun" width="350" >
-        </a>
-
-        <% Picture.all.reverse.each do |pic| %>
-            <% if pic.approved==true %>
-                <a class="postImage" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
-                    <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %> width="350" >
-                </a>
+            <% Picture.all.reverse.each do |pic| %>
+                <% if pic.approved==true %>
+                    <a class="item" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
+                        <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %> width="350" >
+                    </a>
+                <% end %>
             <% end %>
-        <% end %>
 
-        <a class="postImage" href="/assets/mtgongga.jpg" data-lightbox="lake"> 
-            <img src="/assets/mtgongga.jpg" alt="Mt Gongga" width="350" >
-        </a>
+<!--             <div class="item"><img src="/assets/indoorpool.gif"></div>
+            <div class="item"><img src="/assets/catgun.gif"></div>
+            <div class="item"><img src="/assets/colorado.jpg"></div>
+            <div class="item"><img src="/assets/coolneon.gif"></div>
+            <div class="item"><img src="/assets/dogbear.jpg"></div>
+            <div class="item"><img src="/assets/dogfish.gif"></div>
+            <div class="item"><img src="/assets/falling.jpg"></div>
+            <div class="item"><img src="/assets/funnyseals.jpg"></div>
+            <div class="item"><img src="/assets/greenmountain.jpg"></div>
+            <div class="item"><img src="/assets/moher.jpg"></div>
+            <div class="item"><img src="/assets/nature.gif"></div>
+            <div class="item"><img src="/assets/panda.gif"></div>
+            <div class="item"><img src="/assets/phillslife.jpg"></div>
+            <div class="item"><img src="/assets/londonn.gif"></div>
+            <div class="item"><img src="/assets/mountaintreesriver.jpg"></div>
+            <div class="item"><img src="/assets/indoorpool.gif"></div>
+            <div class="item"><img src="/assets/indoorpool.gif"></div>
+            <div class="item"><img src="/assets/indoorpool.gif"></div>
+            <div class="item"><img src="/assets/indoorpool.gif"></div>
+            <div class="item"><img src="/assets/indoorpool.gif"></div>
+ -->
 
-        <a class="postImage" href="/assets/borabora.jpg" data-lightbox="borabora"> 
-            <img src="/assets/borabora.jpg" alt="borabora" width="350" >
-        </a>
+            <a class="item" href="/assets/Durdle-Door-sunrise.jpg" data-lightbox="Durdle Door Sunrise"> 
+                <img class="item"src="/assets/Durdle-Door-sunrise.jpg" alt="Durdle Door Sunrise" >
+            </a>
 
-        <a class="postImage" href="/assets/bearcrawl.gif" data-lightbox="bearcrawl"> 
-            <img src="/assets/bearcrawl.gif" alt="bearcrawl" width="350" >
-        </a>
+            <a class="item" href="/assets/indoorpool.gif" data-lightbox="indoorpool"> 
+                <img class="item" src="/assets/indoorpool.gif" alt="indoorpool" >
+            </a>
 
-        <a class="postImage" href="/assets/colorado.jpg" data-lightbox="colorado"> 
-            <img src="/assets/colorado.jpg" alt="colorado" width="350" >
-        </a>
+            <a class="item" href="/assets/funnyseals.jpg" data-lightbox="funnyseals"> 
+                <img class="item" src="/assets/funnyseals.jpg" alt="funnyseals" >
+            </a>
 
-        <a class="postImage" href="/assets/hawaii.jpg" data-lightbox="Hawaii"> 
-            <img src="/assets/hawaii.jpg" alt="Hawaii" width="350" >
-        </a>
+            <a class="item" href="/assets/panda.gif" data-lightbox="panda"> 
+                <img src="/assets/panda.gif" alt="panda"  >
+            </a>
 
-        <a class="postImage" href="/assets/3dart.jpg" data-lightbox="3DArt"> 
-            <img src="/assets/3dart.jpg" alt="3D Art" width="350" height="550">
-        </a>
+            <a class="item" href="/assets/presidentfightclub.jpg" data-lightbox="presidentfightclub"> 
+                <img src="/assets/presidentfightclub.jpg" alt="presidentfightclub" >
+            </a>        
 
-        <a class="postImage" href="/assets/coolhighway.jpg" data-lightbox="Cool Highway"> 
-            <img src="/assets/coolhighway.jpg" alt="Highway Architecture" width="350" >
-        </a>
+            <a class="item" href="/assets/3dgif.gif" data-lightbox="3dgif"> 
+                <img src="/assets/3dgif.gif" alt="3dgif"  >
+            </a>
 
-        <a class="postImage" href="/assets/coolneon.gif" data-lightbox="coolneon"> 
-            <img src="/assets/coolneon.gif" alt="coolneon" width="350" >
-        </a>        
+            <a class="item" href="/assets/doghi.jpg" data-lightbox="doghi"> 
+                <img src="/assets/doghi.jpg" alt="doghi" width="350" >
+            </a>
 
-        <a class="postImage" href="/assets/irone throne.jpg" data-lightbox="Iron Throne"> 
-            <img src="/assets/irone throne.jpg" alt="Iron Throne" width="350" height="550" >
-        </a>
+            <a class="item" href="/assets/TexasStorm.jpg" data-lightbox="TexasStorm"> 
+                <img src="/assets/TexasStorm.jpg" alt="TexasStorm" width="350" >
+            </a>
 
-        <a class="postImage" href="/assets/iceland1.jpg" data-lightbox="Iceland"> 
-            <img src="/assets/iceland1.jpg" alt="Iceland Glaciers" width="350" >
-        </a>
+            <a class="item" href="/assets/snowybench.gif" data-lightbox="snowybench"> 
+                <img src="/assets/snowybench.gif" alt="snowybench" width="350" >
+            </a>      
 
-        <a class="postImage" href="/assets/scotland.jpg" data-lightbox="Scotland"> 
-            <img src="/assets/scotland.jpg" alt="Scotland" width="350" >
-        </a>
+            <a class="item" href="/assets/italy.jpg" data-lightbox="Italy"> 
+                <img src="/assets/italy.jpg" alt="Italy Countryside" width="350" >
+            </a>  
 
-        <a class="postImage" href="/assets/kuala.jpg" data-lightbox="Kuala Lampur"> 
-            <img src="/assets/kuala.jpg" alt="Kuala Lampur" width="350" >
-        </a>
+            <a class="item" href="/assets/catgun.gif" data-lightbox="catgun"> 
+                <img src="/assets/catgun.gif" alt="catgun" width="350" >
+            </a>
 
-        <a class="postImage" href="/assets/alanprarie.gif" data-lightbox="alanprarie"> 
-            <img src="/assets/alanprarie.gif" alt="alanprarie" width="350" >
-        </a>
+            <a class="item" href="/assets/mtgongga.jpg" data-lightbox="lake"> 
+                <img src="/assets/mtgongga.jpg" alt="Mt Gongga" width="350" >
+            </a>
 
-        <a class="postImage" href="/assets/rockswater.jpg" data-lightbox="Rocky Ocean"> 
-            <img src="/assets/rockswater.jpg" alt="Rocky Ocean" width="350" >
-        </a>
+            <a class="item" href="/assets/colorado.jpg" data-lightbox="colorado"> 
+                <img src="/assets/colorado.jpg" alt="colorado" width="350" >
+            </a>
 
-        <a class="postImage" href="/assets/watergif.gif" data-lightbox="watergif"> 
-            <img src="/assets/watergif.gif" alt="watergif" width="350" >
-        </a>
+            <a class="item" href="/assets/coolhighway.jpg" data-lightbox="Cool Highway"> 
+                <img src="/assets/coolhighway.jpg" alt="Highway Architecture" width="350" >
+            </a>
 
+            <a class="item" href="/assets/coolneon.gif" data-lightbox="coolneon"> 
+                <img src="/assets/coolneon.gif" alt="coolneon" width="350" >
+            </a>        
 
+            <a class="item" href="/assets/irone throne.jpg" data-lightbox="Iron Throne"> 
+                <img src="/assets/irone throne.jpg" alt="Iron Throne" width="350" height="550" >
+            </a>
 
+            <a class="item" href="/assets/iceland1.jpg" data-lightbox="Iceland"> 
+                <img src="/assets/iceland1.jpg" alt="Iceland Glaciers" width="350" >
+            </a>
+
+            <a class="item" href="/assets/scotland.jpg" data-lightbox="Scotland"> 
+                <img src="/assets/scotland.jpg" alt="Scotland" width="350" >
+            </a>
+
+            <a class="item" href="/assets/kuala.jpg" data-lightbox="Kuala Lampur"> 
+                <img src="/assets/kuala.jpg" alt="Kuala Lampur" >
+            </a>
+
+            <a class="item" href="/assets/alanprarie.gif" data-lightbox="alanprarie"> 
+                <img src="/assets/alanprarie.gif" alt="alanprarie" >
+            </a>
+
+            <a class="item" href="/assets/rockswater.jpg" data-lightbox="Rocky Ocean"> 
+                <img src="/assets/rockswater.jpg" alt="Rocky Ocean" >
+            </a>
+
+    </div>
 </div>
 
-</div>
+</br>
+</br>
+</br>
 
-</br>
-</br>
-</br>
+<script src="jquery-1.7.1.min.js"></script>
+<script src="jquery.masonry.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
+<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+<script>
+$(document).ready(function() {
+    var container = document.querySelector('#container');
+    var msnry;
+    // initialize Masonry after all images have loaded
+    imagesLoaded( container, function() {
+      msnry = new Masonry( container );
+    });
+
+});
+
+</script>
 
 </body>
 
