@@ -66,6 +66,11 @@
         <%= f.file_field :image, description: 'choose file', label: 'choose file' %>
       </div>
 
+
+        Type: <%= f.select :vibeType, [['image', 1], ['soundcloud', 2], ['youtube', 3]] %> </br>
+        Body: <%= f.text_field :body %></br>
+        URL: <%= f.text_field :url %></br>
+
       <div class="actions">
         <%= f.submit "Submit", data: { confirm: "your file has been submitted for approval" } %>
       </div>

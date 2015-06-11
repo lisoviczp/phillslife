@@ -25,7 +25,8 @@ body {
 }
 
 h1 {
-	font-family: 'Bad Script', cursive;
+	/*font-family: 'Bad Script', cursive;*/
+	font-family: 'Megrim', cursive;
 /*	font-family: 'Englebert', sans-serif;
 	font-family: 'Delius', cursive;*/
 	/*font-family: 'Loved by the King', cursive;*/
@@ -102,12 +103,13 @@ p {
 }
 
 iframe {
-	margin-left: 10%;
-	margin-right: 10%;
-	width: 80%;
-	height: 5em;
+	/*margin-left: 10%;*/
+	/*margin-right: 10%;*/
+	/*width: 80%;*/
+	/*height: 5em;*/
 	z-index: 1;
-	margin-bottom: 1em;
+	padding: .5em;
+	/*margin-bottom: 1em;*/
 }
 
 

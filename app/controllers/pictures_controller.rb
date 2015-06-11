@@ -28,6 +28,21 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
 
+    if @picture.vibeType == "2"
+        start= 'content="soundcloud://sounds:'
+        i = open(@picture.url).read.index(start)
+        @picture.uid = open(@picture.url).read[i+29..i+37] 
+    elsif @picture.vibeType == "1"
+      @picture.uid = @picture.url
+    elsif @picture.vibeType == "3"
+      start = 'watch'
+      i = @picture.url.index(start)
+      pp = @picture.url[i, i+1]
+      @picture.uid = pp[8,100]
+    end
+
+
+
     respond_to do |format|
       if @picture.save
         format.html { redirect_to root_path, notice: 'Picture was successfully created.' }
@@ -80,7 +95,7 @@ class PicturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def picture_params
-      params.require(:picture).permit(:title, :image, :approved)
+      params.require(:picture).permit(:title, :image, :approved, :vibeType, :body, :url, :uid)
 
     end
 end

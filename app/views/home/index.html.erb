@@ -15,6 +15,11 @@
         background-attachment: fixed;
     }
 
+    h1 {
+        font-family: 'Megrim', cursive;
+        color: white;
+        font-weight: 800;
+    }
 
     </style>
 
@@ -24,6 +29,8 @@
 
 
 </br>
+
+<link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
 <h1 id="title" style="color: #0085ca;"> phills life </h1>
 
 <!-- 
@@ -45,9 +52,19 @@
 
             <% Picture.all.reverse.each do |pic| %>
                 <% if pic.approved==true %>
-                    <a class="item" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
-                        <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %> width="350" >
-                    </a>
+                    <% if pic.vibeType == "2" %>
+                        <div class="item"> 
+                            <iframe width="300" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
+                        </div>
+                    <% elsif pic.vibeType == "3" %>
+                        <div class="item"> 
+                            <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
+                        </div>
+                    <% else %>
+                        <a class="item" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
+                            <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %> width="300" >
+                        </a>
+                    <% end %>
                 <% end %>
             <% end %>
 
