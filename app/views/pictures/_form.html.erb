@@ -1,25 +1,8 @@
-<!DOCTYPE html>
+<! DOCTYPE html>
 <html>
 <head>
 <style>
 
-.new-picture {
-  border: 1px;
-  border-style: solid;
-  background: white;
-  padding: 5px;
-  width: 50%;
-
-  /*position center*/
-  left: 0;
-  position:absolute;
-  text-align:center;
-  top: 265px;
-  width: 100%;
-  z-index: 100;
-
-  opacity: 0.60;
-}
 
 .my-form {
   width: 33%;
@@ -30,63 +13,64 @@
   z-index: 300;
 }
 
+body {
+  background: url('/assets/bamboo.jpg');
+  background-attachment: fixed;
+}
+
+
 </style>
 </head>
 <body>
 
-<div class="background_image">
+<!-- <div class="background_image">
     <img src="/assets/Nantucket_Pan.JPG" alt="Nantucket" style="width:100%;height:400px;">
-</div>
+</div> -->
 
-
-<h1> phills life </h1>
 
 <h3> submit a picture or gif </h3>
 
-<div class="my-form">
-  <%= form_for(@picture) do |f| %>
-    <% if @picture.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
 
-        <ul>
-        <% @picture.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+<div class="pic-container">
+  <div class="pic-show-container-test">
+    <div class="upload-form">
+      <%= form_for(@picture) do |f| %>
+        <% if @picture.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
+
+            <ul>
+            <% @picture.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
         <% end %>
-        </ul>
-      </div>
-    <% end %>
 
-    <div class="new-picture">
-      <div class="field">
-        <%= f.text_field :title %> <!-- , placeholder: 'name it' %> -->
-      </div>
+        <div class="new-picture">
+          <div class="field">
+            <%= f.text_field :title %> <!-- , placeholder: 'name it' %> -->
+          </div>
 
-      <div class="field">
-        <%= f.file_field :image, description: 'choose file', label: 'choose file' %>
-      </div>
+          <div class="field">
+            <%= f.file_field :image, description: 'choose file', label: 'choose file' %>
+          </div>
 
 
-        Type: <%= f.select :vibeType, [['image', 1], ['soundcloud', 2], ['youtube', 3]] %> </br>
-        Body: <%= f.text_field :body %></br>
-        URL: <%= f.text_field :url %></br>
+            Type: <%= f.select :vibeType, [['image', 1], ['soundcloud', 2], ['youtube', 3]] %> </br>
+            Body: <%= f.text_field :body %></br>
+            URL: <%= f.text_field :url %></br>
 
-      <div class="actions">
-        <%= f.submit "Submit", data: { confirm: "your file has been submitted for approval" } %>
-      </div>
+          <div class="actions">
+            <%= f.submit "Submit", data: { confirm: "your file has been submitted for approval" } %>
+          </div>
 
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+
 
 </body>
-</html>
+

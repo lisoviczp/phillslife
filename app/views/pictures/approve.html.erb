@@ -2,54 +2,10 @@
 
 <style>
 
-	.pic-show-container-test {
-	    position: relative;
-	    width: 100%;
-	    /*border: 4px solid black;*/
-	    text-align: center;
-	}
-
-	.pic {
-	    position: relative;
-	    top: 0;
-	    bottom: 0;
-	    left: 0;
-	    right: 0;
-
-	    text-align:center; /* Align center inline elements */
-	    font: 0/0 a;
-	}
-
-	.pic img{
-	    height: 400px;
-	    /*border: 4px solid blue;*/
-	    position: relative;
-	}
-
-
-	#below-image {
-		font-size: 14px;
-		position: relative;
-		display: block;
-/*		font-size: 14px;
-		position: relative;
-		display: block;
-		text-align: center;
-		margin-left: 200px;*/
-		/*border: solid;*/
-		height: 100px;
-	    /*border: 4px solid green;*/
-	    vertical-align: middle;
-	}
-
-	.approve-pic {
-		margin-left: 4%;
-		/*position: relative;*/
-		display: block;
-		text-align: center;
-		margin-left: 200px;
-	}
-
+body {
+	background: url('/assets/colorado.jpg');
+	background-attachment: fixed;
+}
 
 </style>
 
@@ -58,30 +14,79 @@
 <body>
 
 <br>
-<br>
-<br>
+
 
 <div class="pic-container">
 	<div class="pic-show-container-test">
-		<div class="pic">
-			<%= image_tag @picture.image.url %>
-		</div>
+		<% if @picture.vibeType=="2" %>
+			<div class="pic"> 
+                <iframe width="50%" height="350" scrolling="no" frameborder="no" src="<%= @picture.getSrc.to_s %>" ></iframe> 
+            </div>
 
-		<p id="below-image">
-			<%= simple_form_for(@picture) do |f| %>
-			    <%= link_to 'back', root_path %> 
-			    <%= f.check_box :approved %>
-			    <%= f.submit 'approve picture' %>
-				<%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %>
-			<% end %>
-		</p>
+			<div class="approve-box">
+				<%= simple_form_for(@picture) do |f| %>
+					<table>
+						<tr>
+						    <th><%= link_to 'back', root_path %> </th>
+						    <th><%= f.check_box :approved %> </th>
+						  
+							<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
+						</tr>
+						<tr>
+							<th> </th>
+							<th> <%= f.submit 'approve post' %>  </th>
+							<th></th>
+						</tr>
+					</table>
+				<% end %>
+			</div>
+		<% elsif @picture.vibeType=="3" %>
+            <div class="pic"> 
+                <iframe width="50%" height="350" frameborder="0"src="<%= @picture.getSrc.to_s %>" allowfullscreen> </iframe> 
+            </div>
 
+			<div class="approve-box">
+				<%= simple_form_for(@picture) do |f| %>
+					<table>
+						<tr>
+						    <th><%= link_to 'back', root_path %> </th>
+						    <th><%= f.check_box :approved %> </th>
+						  
+							<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
+						</tr>
+						<tr>
+							<th> </th>
+							<th> <%= f.submit 'approve post' %>  </th>
+							<th></th>
+						</tr>
+					</table>
+				<% end %>
+			</div>
+
+		<% else %>
+			<div class="pic">
+				<%= image_tag @picture.image.url %>
+			</div>
+
+			<div class="approve-box">
+				<%= simple_form_for(@picture) do |f| %>
+					<table>
+						<tr>
+						    <th><%= link_to 'back', root_path %> </th>
+						    <th><%= f.check_box :approved %> </th>
+						  
+							<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
+						</tr>
+						<tr>
+							<th> </th>
+							<th> <%= f.submit 'approve post' %>  </th>
+							<th></th>
+						</tr>
+					</table>
+				<% end %>
+			</div>
+		<% end %>
 	</div>
-	</br>
-	</br>
-	</br>
-	</br>
-	</br>
 </div>
 
 

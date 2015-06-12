@@ -2,47 +2,6 @@
 
 <style>
 
-	.pic-show-container-test {
-	    position: relative;
-	    width: 100%;
-	}
-
-	.pic {
-	    position: absolute;
-	    top: 0;
-	    bottom: 0;
-	    left: 0;
-	    right: 0;
-
-	    text-align:center; /* Align center inline elements */
-	    font: 0/0 a;
-	}
-
-	.pic img{
-	    height: 400px;
-	}
-
-
-	#below-image {
-		font-size: 14px;
-		position: relative;
-		display: block;
-/*		font-size: 14px;
-		position: relative;
-		display: block;
-		text-align: center;
-		margin-left: 200px;*/
-		/*border: solid;*/
-	}
-
-	.approve-pic {
-		margin-left: 4%;
-		/*position: relative;*/
-		display: block;
-		text-align: center;
-		margin-left: 200px;
-	}
-
 
 </style>
 
@@ -54,47 +13,32 @@
 <br>
 <br>
 
-<div class="pic-show-container-test">
-	<div class="pic">
-		<%= image_tag @picture.image.url %> </br> 
+<div class="pic-container">
+	<div class="pic-show-container-test">
+            <% if @picture.approved==true %>
+                <% if @picture.vibeType == "2" %>
+                    <div class="pic"> 
+                        <iframe width="50%" height="350" scrolling="no" frameborder="no" src="<%= @picture.getSrc.to_s %>" ></iframe> 
+                    </div>
+                <% elsif @picture.vibeType == "3" %>
+                    <div class="pic"> 
+                        <iframe width="50%" height="350" frameborder="0"src="<%= @picture.getSrc.to_s %>" allowfullscreen> </iframe> 
+                    </div>
+                <% else %>
+                    <a class="pic" href=<%= "#{@picture.image.url}" %> data-lightbox="#{@picture.id}">
+                        <img src=<%= "#{@picture.image.url}" %> alt= <%= "#{@picture.title}" %> width="300" >
+                    </a>
+                <% end %>
+            <% end %>
+		<div class="approve-box">
+			<table>
+				<tr>
+				    <%= link_to 'back', root_path %>
+				</tr>
+			</table>
+		</div>
 	</div>
-	<p id="below-image">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-	    <%= link_to 'back', root_path %> 
-		<% link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %><br>
-	</p>
-
 </div>
-</br>
-</br>
-</br>
-</br>
-</br>
-	  <%= simple_form_for(@picture) do |f| %>
-	        <%= f.check_box :approved %>
-	        <%= f.submit 'approve picture' %>
-    		<%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %>
-    	<% end %>
-
 
 
 </body>
