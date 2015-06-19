@@ -7,7 +7,7 @@
 
 
 body {
-	background: url('/assets/colorado.jpg');
+	background: url('/assets/horizon.jpeg');
 	background-attachment: fixed;
 }
 
@@ -29,35 +29,33 @@ some of my all time favorite music
  -->
 <br>
 
+<link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+
+<h1> chay vibes </h1>
+
 <div class="songs-wrapper">
 	<!-- <h1 id="currentSongH1"> current </h1> -->
-	<p>all time tunes </br>
-	<%= link_to 'current', songs_current_path %> 
+	<p> tuneessss </br>
+	<% link_to 'current', songs_current_path %> 
 	</p>
 
-
-	<% @song.reverse.each do |song| %>
-		<div class="item">
-			<table>
-				<tr>
-					<th> song name </th>
-					<th> song artist </th>
-					<th> listen </th>
-				</tr>
-				<tr>
-					<th> song name </th>
-					<th> song artist </th>
-					<th> listen </th>
-				</tr>				
-				<tr>
-					<th> song name </th>
-					<th> song artist </th>
-					<th> listen </th>
-				</tr>
-			</table>
-		</div>
-	<% end %>
-
+	<table>
+		<tr>
+			<th> track </th>
+			<th> artist </th>
+			<th> listen </th>
+		</tr>
+		<% @song.reverse.each do |song| %>
+			<div class="item">
+					<tr>
+						<th> <%= song.title %> </th>
+						<th> <%= song.body %>  </th>
+						<th> <%= link_to 'listen', song_path(song) %> </th>
+					</tr>
+				
+			</div>
+		<% end %>
+	</table>
 </div>
 
 

@@ -49,18 +49,25 @@ body {
         <% end %>
 
         <div class="new-picture">
-          <div class="field">
-            <%= f.text_field :title %> <!-- , placeholder: 'name it' %> -->
+          <div class="field">          
+            Type: <%= f.select :vibeType, [['image', 1], ['soundcloud', 2], ['youtube', 3]] %> </br>
           </div>
 
           <div class="field">
             <%= f.file_field :image, description: 'choose file', label: 'choose file' %>
           </div>
 
-
-            Type: <%= f.select :vibeType, [['image', 1], ['soundcloud', 2], ['youtube', 3]] %> </br>
+          <div class="field">
+            <%= f.text_field :title %> <!-- , placeholder: 'name it' %> -->
+          </div>
+          
+          <div class="field">
             Body: <%= f.text_field :body %></br>
+          </div>
+
+          <div class="field">
             URL: <%= f.text_field :url %></br>
+          </div>
 
           <div class="actions">
             <%= f.submit "Submit", data: { confirm: "your file has been submitted for approval" } %>
