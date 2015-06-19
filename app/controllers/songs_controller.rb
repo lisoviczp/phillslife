@@ -1,10 +1,10 @@
 class SongsController < ApplicationController
   def index
-    @song = Song.all
+    @song = Picture.where(vibeType: "2")
   end
 
   def show
-    @song = Song.find(params[:id])
+    @song = Picture.find(params[:id])
   end
 
   def new

@@ -20,7 +20,8 @@ body {
 	<div class="pic-show-container-test">
 		<% if @picture.vibeType=="2" %>
 			<div class="pic"> 
-                <iframe width="50%" height="350" scrolling="no" frameborder="no" src="<%= @picture.getSrc.to_s %>" ></iframe> 
+                <iframe width="50%" height="350" scrolling="no" frameborder="no" src="<%= @picture.getSrc.to_s %>" >
+                </iframe> 
             </div>
 
 			<div class="approve-box">
