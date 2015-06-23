@@ -41,7 +41,8 @@ gem 'spring',        group: :development
 
 gem 'paperclip'
 gem 'mini_exiftool_vendored'
-gem 'aws-sdk'
+# gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 gem 'simple_form'
 gem 'devise'
 

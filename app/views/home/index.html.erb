@@ -60,35 +60,12 @@
                             <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
                         </div>
                     <% else %>
-                        <a class="item" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
-                            <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %> width="300" >
+                        <a class="item" width="300" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
+                            <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
                         </a>
                     <% end %>
                 <% end %>
             <% end %>
-
-<!--             <div class="item"><img src="/assets/indoorpool.gif"></div>
-            <div class="item"><img src="/assets/catgun.gif"></div>
-            <div class="item"><img src="/assets/colorado.jpg"></div>
-            <div class="item"><img src="/assets/coolneon.gif"></div>
-            <div class="item"><img src="/assets/dogbear.jpg"></div>
-            <div class="item"><img src="/assets/dogfish.gif"></div>
-            <div class="item"><img src="/assets/falling.jpg"></div>
-            <div class="item"><img src="/assets/funnyseals.jpg"></div>
-            <div class="item"><img src="/assets/greenmountain.jpg"></div>
-            <div class="item"><img src="/assets/moher.jpg"></div>
-            <div class="item"><img src="/assets/nature.gif"></div>
-            <div class="item"><img src="/assets/panda.gif"></div>
-            <div class="item"><img src="/assets/phillslife.jpg"></div>
-            <div class="item"><img src="/assets/londonn.gif"></div>
-            <div class="item"><img src="/assets/mountaintreesriver.jpg"></div>
-            <div class="item"><img src="/assets/indoorpool.gif"></div>
-            <div class="item"><img src="/assets/indoorpool.gif"></div>
-            <div class="item"><img src="/assets/indoorpool.gif"></div>
-            <div class="item"><img src="/assets/indoorpool.gif"></div>
-            <div class="item"><img src="/assets/indoorpool.gif"></div>
- -->
-
             <a class="item" href="/assets/Durdle-Door-sunrise.jpg" data-lightbox="Durdle Door Sunrise"> 
                 <img class="item"src="/assets/Durdle-Door-sunrise.jpg" alt="Durdle Door Sunrise" >
             </a>

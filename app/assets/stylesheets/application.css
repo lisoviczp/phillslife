@@ -356,16 +356,14 @@ footer {
     width: 85%;
     margin-top: 4em;
     margin-left: 7.5%;
-    text-align: center;
+    margin-right: 7.5%;
     margin-bottom: 3em;
-    /*padding: 1em;*/
-    /*position: absolute;*/
+    text-align: center;
 }
 
 #container {
-    padding-top: 3em;
-    padding-left: 3em;
-    margin-bottom: 3em;
+    padding: 2em;
+    margin-bottom: 2em;
 }
 
 
@@ -437,6 +435,7 @@ th {
 
 table {
 	margin-left: 10%;
+	margin-right: 10%;
 	width: 80%;
 	margin-bottom: 30%;
 }
