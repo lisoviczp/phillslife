@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   # get 'pictures' => 'home#index'
 
   get 'pictures/approve' => 'pictures#approve'
-  get 'pictures/approve/:id' => 'pictures#approve'
+  get 'pictures/approve/:id' => 'pictures#approve', as: 'pic_approve'
 
   root 'home#index'
 

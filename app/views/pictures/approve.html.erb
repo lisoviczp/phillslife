@@ -28,14 +28,23 @@ body {
 				<%= simple_form_for(@picture) do |f| %>
 					<table>
 						<tr>
-						    <th><%= link_to 'back', root_path %> </th>
+						    <th> <%= link_to image_tag("glyphicons-173-rewind.png"), pic_approve_path(@picture.id - 1)%> </th>
 						    <th><%= f.check_box :approved %> </th>
-						  
-							<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
+						    <th> <%= link_to image_tag("glyphicons-177-forward.png"), pic_approve_path(@picture.id + 1)%> </th>
 						</tr>
 						<tr>
 							<th> </th>
 							<th> <%= f.submit 'approve post' %>  </th>
+							<th></th>
+						</tr>
+						<tr>
+							<th> </th>
+							<th> </th>
+							<th> </th>
+						</tr>
+						<tr>
+							<th> </th>
+							<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
 							<th></th>
 						</tr>
 					</table>
@@ -50,14 +59,23 @@ body {
 				<%= simple_form_for(@picture) do |f| %>
 					<table>
 						<tr>
-						    <th><%= link_to 'back', root_path %> </th>
+						    <th> <%= link_to image_tag("glyphicons-173-rewind.png"), pic_approve_path(@picture.id - 1)%> </th>
 						    <th><%= f.check_box :approved %> </th>
-						  
-							<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
+						    <th> <%= link_to image_tag("glyphicons-177-forward.png"), pic_approve_path(@picture.id + 1)%> </th>
 						</tr>
 						<tr>
 							<th> </th>
 							<th> <%= f.submit 'approve post' %>  </th>
+							<th></th>
+						</tr>
+						<tr>
+							<th> </th>
+							<th> </th>
+							<th> </th>
+						</tr>
+						<tr>
+							<th> </th>
+							<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
 							<th></th>
 						</tr>
 					</table>
@@ -66,21 +84,30 @@ body {
 
 		<% else %>
 			<div class="pic">
-				<%= image_tag @picture.image.url %>
+				<%= image_tag @picture.image.url, style: "width:50%; height:350;" %>
 			</div>
 
 			<div class="approve-box">
 				<%= simple_form_for(@picture) do |f| %>
 					<table>
 						<tr>
-						    <th><%= link_to 'back', root_path %> </th>
+						    <th> <%= link_to image_tag("glyphicons-173-rewind.png"), pic_approve_path(@picture.id - 1)%> </th>
 						    <th><%= f.check_box :approved %> </th>
-						  
-							<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
+						    <th> <%= link_to image_tag("glyphicons-177-forward.png"), pic_approve_path(@picture.id + 1)%> </th>
 						</tr>
 						<tr>
 							<th> </th>
 							<th> <%= f.submit 'approve post' %>  </th>
+							<th></th>
+						</tr>
+						<tr>
+							<th> </th>
+							<th> </th>
+							<th> </th>
+						</tr>
+						<tr>
+							<th> </th>
+							<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
 							<th></th>
 						</tr>
 					</table>

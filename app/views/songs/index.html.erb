@@ -34,23 +34,19 @@ some of my all time favorite music
 <h1> chay vibes </h1>
 
 <div class="songs-wrapper">
-	<!-- <h1 id="currentSongH1"> current </h1> -->
-	<p> tuneessss </br>
-	<% link_to 'current', songs_current_path %> 
-	</p>
-
 	<table>
-		<tr>
+		<tr id="table-header">
 			<th> track </th>
 			<th> artist </th>
-			<th> listen </th>
+			<th> vibe </th>
 		</tr>
 		<% @song.reverse.each do |song| %>
 			<div class="item">
 					<tr>
-						<th> <%= song.title %> </th>
+						<th> <%= song.title %></th>
 						<th> <%= song.body %>  </th>
-						<th> <%= link_to 'listen', song_path(song) %> </th>
+<!-- 					<th> <% link_to 'listen', song_path(song) %> </th> -->
+						<th> <%= link_to image_tag("glyphicons-77-headphones.png"), song_path(song) %> </th>
 					</tr>
 				
 			</div>

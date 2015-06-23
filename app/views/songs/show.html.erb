@@ -20,7 +20,7 @@ body {
 	<div class="pic-show-container-test">
 		<% if @song.vibeType=="2" %>
 			<div class="pic"> 
-                <iframe width="50%" height="350" scrolling="no" autoplay="true" frameborder="no" src="<%= @song.getSrc.to_s %>" >
+                <iframe width="50%" height="350" scrolling="no" frameborder="no" src="<%= @song.getSrcSoundcloud.to_s %>" >
                 </iframe> 
             </div>
         <% end %>

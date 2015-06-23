@@ -18,27 +18,18 @@
 /*all CSS done by me :)*/
 body {
 	background-color: #cee2f8; 
-	/*background-color: #0085ca; good blue*/
 	padding-bottom: 20px;
 	border-bottom: 1px solid transparent;
 	position: relative;
 }
 
 h1 {
-	/*font-family: 'Bad Script', cursive;*/
-	/*font-family: 'Megrim', cursive;*/
-/*	font-family: 'Englebert', sans-serif;
-	font-family: 'Delius', cursive;*/
-	/*font-family: 'Loved by the King', cursive;*/
-	/*font-family: 'Over the Rainbow', cursive;*/
 	font-size: 70px;
 	font-weight: 100;
 	color: white;
 	z-index: 1;
 	font-family: 'Megrim', cursive;
-	/*color: white;*/
 	font-weight: 800;
-
 }
 
 h2 {
@@ -47,12 +38,7 @@ h2 {
 	font-size: 20px;
 	color: #0085ca;
 	text-transform: lowercase;
-
-	/*top: 115px;*/
-
-	/*position center*/
 	left: 0;
-	/*position: absolute;*/
 	z-index: 1;
 	text-align: center;
 	width: 100%;
@@ -66,28 +52,11 @@ h3 {
 	color: #0085ca;
 	color: white;
 	padding-top: 3%;
-
-/*
-	font-family: 'Bad Script', cursive;
-	font-weight: 100;
-	font-size: 25px;
-	color: #0085ca;
-	color: white;
-	top: 145px;
-	
-	position: center;
-	left: 0;
-	position: absolute;
-	z-index: 1;
-	text-align: center;
-	width: 100%;
-	*/
 }
 
 p {
 	font-family: helvetica;
 	font-weight: 100;
-	/*color: #0085ca; blue*/
 	text-align: center;
 	color: rgb(90,90,90);
 }
@@ -110,13 +79,8 @@ p {
 }
 
 iframe {
-	/*margin-left: 10%;*/
-	/*margin-right: 10%;*/
-	/*width: 80%;*/
-	/*height: 5em;*/
 	z-index: 1;
 	padding: .5em;
-	/*margin-bottom: 1em;*/
 }
 
 
@@ -137,7 +101,6 @@ h1 #currentSongH1{
 
 .posts {
 	padding-top: 2px;
-	/*border-style: ridge;*/
 	padding-bottom: 2px;
 	text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
 	z-index: 1;
@@ -254,6 +217,10 @@ li {
   color: rgb(90,90,90);
 }
 
+#words:link {
+  color: rgb(90,90,90);
+}
+
 #words:active {
   color: rgb(90,90,90);
 }
@@ -272,9 +239,15 @@ li {
   color: rgb(90,90,90);
 }
 
+.nav #words:link {
+  color: rgb(90,90,90);
+}
+
+
 a:link {
   text-decoration: none;
   font-weight: 0;
+  color: rgb(90,90,90);
 }
 
 a:visited {
@@ -471,4 +444,8 @@ table {
 th {
 	font-family: helvetica;
 	font-weight: 100;
+}
+
+#table-header {
+	font-size: 2.5em;
 }
