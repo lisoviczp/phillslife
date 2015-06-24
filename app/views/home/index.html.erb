@@ -1,4 +1,4 @@
-<! DOCTYPE html>
+<! DOCTYPE html >
 <html>
 
 <head>
@@ -6,7 +6,7 @@
     <style>
 
     img {
-        max-width: 100%;
+        /*max-width: 100%;*/
     }
     
 
@@ -49,7 +49,7 @@
 
 <div id="container" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 320 }'>
 
-            <% Picture.all.reverse.each do |pic| %>
+            <% Picture.all.each do |pic| %>
                 <% if pic.approved==true %>
                     <% if pic.vibeType == "2" %>
                         <div class="item"> 
@@ -60,12 +60,16 @@
                             <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
                         </div>
                     <% else %>
-                        <a class="item" width="300" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
-                            <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
-                        </a>
+                        <div class="item">
+                            <a width="300" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
+                                <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
+                            </a>
+                        </div>
                     <% end %>
                 <% end %>
             <% end %>
+
+
             <a class="item" href="/assets/Durdle-Door-sunrise.jpg" data-lightbox="Durdle Door Sunrise"> 
                 <img class="item"src="/assets/Durdle-Door-sunrise.jpg" alt="Durdle Door Sunrise" >
             </a>

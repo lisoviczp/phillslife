@@ -2,9 +2,12 @@
 
 <style>
 
+body {
+    background: url('/assets/colorado.jpg');
+    background-attachment: fixed;
+}
 
 </style>
-
 </head>
 
 <body>
@@ -30,13 +33,17 @@
                     </a>
                 <% end %>
             <% end %>
-		<div class="approve-box">
-			<table>
-				<tr>
-				    <%= link_to 'back', root_path %>
-				</tr>
-			</table>
-		</div>
+            <div class="approve-box">
+                <%= simple_form_for(@picture) do |f| %>
+                    <table>
+                        <tr>
+                            <th> <%= link_to image_tag("glyphicons-173-rewind.png"), picture_path(@picture.id - 1), style: "width:10; height: 2em;"%> </th>
+                            <th> </th>
+                            <th> <%= link_to image_tag("glyphicons-177-forward.png"), picture_path(@picture.id + 1)%> </th>
+                        </tr>
+                    </table>
+                <% end %>
+            </div>
 	</div>
 </div>
 

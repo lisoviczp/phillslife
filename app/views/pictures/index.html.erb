@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<! DOCTYPE html >
 <html>
 
 <head>
@@ -7,38 +7,61 @@
   <script src="js/lightbox.min.js"></script>
   <link href="css/lightbox.css" rel="stylesheet" />
 
+
 </head>
 
 <body>
 
-<h1> phills life </h1>
 
 <h3> submitted posts</h3>
 
-<div class="background_image">
-    <img src="/assets/Nantucket_Pan.JPG" alt="Nantucket" style="width:100%;height:400px;">
+
+<div class="mainForm">
+
+	<div id="container" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 320 }'>
+
+		<% Picture.all.reverse.each do |pic| %>
+			<% if pic.approved==true %>
+                <% if pic.vibeType == "2" %>
+                    <div class="item"> 
+                        <iframe width="300" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
+                    </div>
+                <% elsif pic.vibeType == "3" %>
+                    <div class="item"> 
+                        <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
+                    </div>
+                <% else %>
+                    <div class="item">
+                        <a width="300" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
+                            <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
+                        </a>
+                    </div>
+                <% end %>
+            <% end %>
+		<% end %>
+	</div>
 </div>
-<br>
 
-<div class="pic-container">
+<script src="jquery-1.7.1.min.js"></script>
+<script src="jquery.masonry.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
+<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+<script>
 
-	<% Picture.all.reverse.each do |pic| %>
-		<% if pic.approved==true %>
-	        <a class="postImage" href=<%= pic.image.url %> data-lightbox="#{pic.id}">
-	            <img src=<%= pic.image.url %> alt= <% pic.title %> width="350">
-	        </a>
-	    <% end %>
-	<% end %>
+// $('.mainForm').hide()
 
-</div>
+$(document).ready(function() {
+    $('.mainForm').show()
+    var container = document.querySelector('#container');
+    var msnry;
+    // initialize Masonry after all images have loaded
+    imagesLoaded( container, function() {
+      msnry = new Masonry( container );
+    });
 
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+});
+
+</script>
 
 </body>
 </html>

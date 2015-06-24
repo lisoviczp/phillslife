@@ -366,23 +366,9 @@ footer {
     margin-bottom: 2em;
 }
 
-
-.approve-box {
-	/*border: 1px solid gray;*/
-	width: 33%;
-	margin-left: 33%; 
-	margin-top: 1%;
-	background-color: white;
-	padding: 1em;
-}
-
 .pic-container {
 	/*border: 1px solid gray;*/
 	margin-bottom: 12em;
-}
-
-th {
-	width: 33%;
 }
 
 .pic-show-container-test {
@@ -433,16 +419,29 @@ th {
 	/*margin-top: 10%;*/
 }
 
+
+.approve-box {
+	border: 1px solid gray;
+	width: 33%;
+	margin-left: 33%; 
+	margin-top: 1%;
+	background-color: white;
+	padding: 1em;
+	/*margin-bottom: 3em;*/
+}
+
 table {
 	margin-left: 10%;
 	margin-right: 10%;
 	width: 80%;
 	margin-bottom: 30%;
+	/*border:1px solid black;*/
 }
 
 th {
 	font-family: helvetica;
 	font-weight: 100;
+	width: 33%;
 }
 
 #table-header {
