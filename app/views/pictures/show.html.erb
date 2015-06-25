@@ -29,7 +29,7 @@ body {
                     </div>
                 <% else %>
                     <a class="pic" href=<%= "#{@picture.image.url}" %> data-lightbox="#{@picture.id}">
-                        <img src=<%= "#{@picture.image.url}" %> alt= <%= "#{@picture.title}" %> width="300" >
+                        <%= image_tag @picture.image.url, style: "width:50%; height:350;" %>
                     </a>
                 <% end %>
             <% end %>
