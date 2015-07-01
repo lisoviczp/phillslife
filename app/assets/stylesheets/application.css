@@ -392,6 +392,11 @@ footer {
     text-align: center;
 }
 
+.testerr {
+	float: left;
+	position: relative;
+}
+
 .pic {
     position: relative;
     top: 0;

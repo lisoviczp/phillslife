@@ -8,6 +8,16 @@ body {
 	background-attachment: fixed;
 }
 
+#sign img {
+    height: 50px;
+    display: inline;
+    position: relative;
+}
+
+#comment tr{
+    vertical-align: text-top;
+}
+
 </style>
 
 </head>
@@ -16,16 +26,72 @@ body {
 
 <br>
 
+<!-- new -->
 <div class="pic-container">
+    <div class="pic-show-container-test">
+        <% if @song.vibeType=="2" %>
+            <div class="pic"> 
+                <iframe width="50%" height="350" scrolling="no" frameborder="no" src="<%= @song.getSrcSoundcloud.to_s %>" >
+                </iframe> 
+            </div>
+            <div class="approve-box">
+                <%= link_to 'back to songs', songs_path %>
+            </div>
+        <% end %>
+    </div>
+</div>
+<!-- end new -->
+
+
+
+
+
+<!-- orig -->
+<!-- <div class="pic-container">
 	<div class="pic-show-container-test">
 		<% if @song.vibeType=="2" %>
 			<div class="pic"> 
                 <iframe width="50%" height="350" scrolling="no" frameborder="no" src="<%= @song.getSrcSoundcloud.to_s %>" >
                 </iframe> 
             </div>
+            <div class="approve-box">
+                <table>
+                    <tr>
+                        <% if (@song.id - 1) == true %>
+                            <th><div id="sign"> <%= link_to image_tag("lessthan.png"), songs_show_path(@song.id - 1) %> </div> </th>
+                        <% else %>
+                             <th><div id="sign"> <%= link_to image_tag("lessthan.png"), songs_path %> </div> </th>              
+                        <% end %>
+                        <% if (@song.id + 1) == true %>
+                            <th><div id="sign"> <%= link_to image_tag("greaterthan.png"), songs_show_path(@song.id + 1) %> </div> </th>
+                        <% else %>
+                             <th><div id="sign"> <%= link_to image_tag("greaterthan.png"), songs_path %> </div> </th>              
+                        <% end %>
+                    </tr>
+                    <tr id="comment">
+                        <% if (@song.id - 1) == true %>
+                            <th> prev </th>
+                        <% else %>
+                             <th> songs </th>              
+                        <% end %>
+                        <% if (@song.id + 1) == true %>
+                            <th> next </th>
+                        <% else %>
+                             <th> songs </th>              
+                        <% end %>
+                    </tr>
+                	<% link_to image_tag("glyphicons-225-chevron-left.png"), songs_path %>
+                </table>
+            </div>
+
         <% end %>
     </div>
-</div>
+</div> -->
+<!-- end orig -->
+
+
+
+
 
 
 </body>
