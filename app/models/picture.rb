@@ -33,6 +33,19 @@ class Picture < ActiveRecord::Base
 		source += "&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"
 	end
 
+	def getNextSongId
+		this_id = self.id
+		for eachItem in this_id+1..Picture.last.id
+				thisPic = Picture.where(id: eachItem)
+				if thisPic.vibeType == '2'
+					thisPic.id
+				else
+					next
+				end
+		end
+		false
+	end
+
 
 
 

@@ -27,16 +27,17 @@
 <body> 
 
 
+<script src="jquery-1.7.1.min.js"></script>
+<script src="jquery.masonry.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
+<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+
+
 </br>
 
 <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
 <h1 id="title"> phills life </h1>
 
-<!-- 
-<div class="background_image">
-    <img src="/assets/Nantucket_Pan.JPG" alt="Nantucket" style="width:100%;height:400px;">
-</div>
- -->
 <!-- <div class="">
 	<iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170106476&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 </div> -->
@@ -161,26 +162,6 @@
 </br>
 </br>
 
-<script src="jquery-1.7.1.min.js"></script>
-<script src="jquery.masonry.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
-<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
-<script>
-
-// $('.mainForm').hide()
-
-$(document).ready(function() {
-    $('.mainForm').show()
-    var container = document.querySelector('#container');
-    var msnry;
-    // initialize Masonry after all images have loaded
-    imagesLoaded( container, function() {
-      msnry = new Masonry( container );
-    });
-
-});
-
-</script>
 
 </body>
 
