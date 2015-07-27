@@ -52,7 +52,8 @@ $(document).ready(function() {
 });
 
 
-var fancybox = function(){
-    $(".lightbox").lightbox();
-};
-$(document).on("page:load ready", lightbox);
+// var fancybox = function(){
+//     $(".lightbox").lightbox();
+// };
+
+// $(document).on("page:load ready", lightbox);

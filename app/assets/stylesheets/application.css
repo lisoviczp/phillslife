@@ -30,6 +30,7 @@ h1 {
 	z-index: 1;
 	font-family: 'Megrim', cursive;
 	font-weight: 800;
+	text-align: center;
 }
 
 h2 {
@@ -52,6 +53,7 @@ h3 {
 	color: #0085ca;
 	color: white;
 	padding-top: 3%;
+	text-align: center;
 }
 
 p {

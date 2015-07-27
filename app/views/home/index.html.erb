@@ -31,112 +31,111 @@
 
 <div id="container">
 
-            <% Picture.all.each do |pic| %>
-                <% if pic.approved==true %>
-                    <% if pic.vibeType == "2" %>
-                        <div class="item"> 
-                            <iframe width="300" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
-                        </div>
-                    <% elsif pic.vibeType == "3" %>
-                        <div class="item"> 
-                            <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
-                        </div>
-                    <% else %>
-                        <div class="item">
-                            <a width="300" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
-                                <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
-                            </a>
-                        </div>
-                    <% end %>
+        <% Picture.all.each do |pic| %>
+            <% if pic.approved==true %>
+                <% if pic.vibeType == "2" %>
+                    <div class="item"> 
+                        <iframe width="300" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
+                    </div>
+                <% elsif pic.vibeType == "3" %>
+                    <div class="item"> 
+                        <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
+                    </div>
+                <% else %>
+                    <div class="item">
+                        <a width="300" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
+                            <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
+                        </a>
+                    </div>
                 <% end %>
             <% end %>
+        <% end %>
 
 
-            <a class="item" href="/assets/Durdle-Door-sunrise.jpg" data-lightbox="Durdle Door Sunrise"> 
-                <img class="item"src="/assets/Durdle-Door-sunrise.jpg" alt="Durdle Door Sunrise" >
-            </a>
+        <a class="item" href="/assets/Durdle-Door-sunrise.jpg" data-lightbox="Durdle Door Sunrise"> 
+            <img class="item"src="/assets/Durdle-Door-sunrise.jpg" alt="Durdle Door Sunrise" >
+        </a>
 
-            <a class="item" href="/assets/indoorpool.gif" data-lightbox="indoorpool"> 
-                <img class="item" src="/assets/indoorpool.gif" alt="indoorpool" >
-            </a>
+        <a class="item" href="/assets/indoorpool.gif" data-lightbox="indoorpool"> 
+            <img class="item" src="/assets/indoorpool.gif" alt="indoorpool" >
+        </a>
 
-            <a class="item" href="/assets/funnyseals.jpg" data-lightbox="funnyseals"> 
-                <img class="item" src="/assets/funnyseals.jpg" alt="funnyseals" >
-            </a>
+        <a class="item" href="/assets/funnyseals.jpg" data-lightbox="funnyseals"> 
+            <img class="item" src="/assets/funnyseals.jpg" alt="funnyseals" >
+        </a>
 
-            <a class="item" href="/assets/panda.gif" data-lightbox="panda"> 
-                <img src="/assets/panda.gif" alt="panda"  >
-            </a>
+        <a class="item" href="/assets/panda.gif" data-lightbox="panda"> 
+            <img src="/assets/panda.gif" alt="panda"  >
+        </a>
 
-            <a class="item" href="/assets/presidentfightclub.jpg" data-lightbox="presidentfightclub"> 
-                <img src="/assets/presidentfightclub.jpg" alt="presidentfightclub" >
-            </a>        
+        <a class="item" href="/assets/presidentfightclub.jpg" data-lightbox="presidentfightclub"> 
+            <img src="/assets/presidentfightclub.jpg" alt="presidentfightclub" >
+        </a>        
 
-            <a class="item" href="/assets/3dgif.gif" data-lightbox="3dgif"> 
-                <img src="/assets/3dgif.gif" alt="3dgif"  >
-            </a>
+        <a class="item" href="/assets/3dgif.gif" data-lightbox="3dgif"> 
+            <img src="/assets/3dgif.gif" alt="3dgif"  >
+        </a>
 
-            <a class="item" href="/assets/doghi.jpg" data-lightbox="doghi"> 
-                <img src="/assets/doghi.jpg" alt="doghi" width="350" >
-            </a>
+        <a class="item" href="/assets/doghi.jpg" data-lightbox="doghi"> 
+            <img src="/assets/doghi.jpg" alt="doghi" width="350" >
+        </a>
 
-            <a class="item" href="/assets/TexasStorm.jpg" data-lightbox="TexasStorm"> 
-                <img src="/assets/TexasStorm.jpg" alt="TexasStorm" width="350" >
-            </a>
+        <a class="item" href="/assets/TexasStorm.jpg" data-lightbox="TexasStorm"> 
+            <img src="/assets/TexasStorm.jpg" alt="TexasStorm" width="350" >
+        </a>
 
-            <a class="item" href="/assets/snowybench.gif" data-lightbox="snowybench"> 
-                <img src="/assets/snowybench.gif" alt="snowybench" width="350" >
-            </a>      
+        <a class="item" href="/assets/snowybench.gif" data-lightbox="snowybench"> 
+            <img src="/assets/snowybench.gif" alt="snowybench" width="350" >
+        </a>      
 
-            <a class="item" href="/assets/italy.jpg" data-lightbox="Italy"> 
-                <img src="/assets/italy.jpg" alt="Italy Countryside" width="350" >
-            </a>  
+        <a class="item" href="/assets/italy.jpg" data-lightbox="Italy"> 
+            <img src="/assets/italy.jpg" alt="Italy Countryside" width="350" >
+        </a>  
 
-            <a class="item" href="/assets/catgun.gif" data-lightbox="catgun"> 
-                <img src="/assets/catgun.gif" alt="catgun" width="350" >
-            </a>
+        <a class="item" href="/assets/catgun.gif" data-lightbox="catgun"> 
+            <img src="/assets/catgun.gif" alt="catgun" width="350" >
+        </a>
 
-            <a class="item" href="/assets/mtgongga.jpg" data-lightbox="lake"> 
-                <img src="/assets/mtgongga.jpg" alt="Mt Gongga" width="350" >
-            </a>
+        <a class="item" href="/assets/mtgongga.jpg" data-lightbox="lake"> 
+            <img src="/assets/mtgongga.jpg" alt="Mt Gongga" width="350" >
+        </a>
 
-            <a class="item" href="/assets/colorado.jpg" data-lightbox="colorado"> 
-                <img src="/assets/colorado.jpg" alt="colorado" width="350" >
-            </a>
+        <a class="item" href="/assets/colorado.jpg" data-lightbox="colorado"> 
+            <img src="/assets/colorado.jpg" alt="colorado" width="350" >
+        </a>
 
-            <a class="item" href="/assets/coolhighway.jpg" data-lightbox="Cool Highway"> 
-                <img src="/assets/coolhighway.jpg" alt="Highway Architecture" width="350" >
-            </a>
+        <a class="item" href="/assets/coolhighway.jpg" data-lightbox="Cool Highway"> 
+            <img src="/assets/coolhighway.jpg" alt="Highway Architecture" width="350" >
+        </a>
 
-            <a class="item" href="/assets/coolneon.gif" data-lightbox="coolneon"> 
-                <img src="/assets/coolneon.gif" alt="coolneon" width="350" >
-            </a>        
+        <a class="item" href="/assets/coolneon.gif" data-lightbox="coolneon"> 
+            <img src="/assets/coolneon.gif" alt="coolneon" width="350" >
+        </a>        
 
-            <a class="item" href="/assets/irone throne.jpg" data-lightbox="Iron Throne"> 
-                <img src="/assets/irone throne.jpg" alt="Iron Throne" width="350" height="550" >
-            </a>
+        <a class="item" href="/assets/irone throne.jpg" data-lightbox="Iron Throne"> 
+            <img src="/assets/irone throne.jpg" alt="Iron Throne" width="350" height="550" >
+        </a>
 
-            <a class="item" href="/assets/iceland1.jpg" data-lightbox="Iceland"> 
-                <img src="/assets/iceland1.jpg" alt="Iceland Glaciers" width="350" >
-            </a>
+        <a class="item" href="/assets/iceland1.jpg" data-lightbox="Iceland"> 
+            <img src="/assets/iceland1.jpg" alt="Iceland Glaciers" width="350" >
+        </a>
 
-            <a class="item" href="/assets/scotland.jpg" data-lightbox="Scotland"> 
-                <img src="/assets/scotland.jpg" alt="Scotland" width="350" >
-            </a>
+        <a class="item" href="/assets/scotland.jpg" data-lightbox="Scotland"> 
+            <img src="/assets/scotland.jpg" alt="Scotland" width="350" >
+        </a>
 
-            <a class="item" href="/assets/kuala.jpg" data-lightbox="Kuala Lampur"> 
-                <img src="/assets/kuala.jpg" alt="Kuala Lampur" >
-            </a>
+        <a class="item" href="/assets/kuala.jpg" data-lightbox="Kuala Lampur"> 
+            <img src="/assets/kuala.jpg" alt="Kuala Lampur" >
+        </a>
 
-            <a class="item" href="/assets/alanprarie.gif" data-lightbox="alanprarie"> 
-                <img src="/assets/alanprarie.gif" alt="alanprarie" >
-            </a>
+        <a class="item" href="/assets/alanprarie.gif" data-lightbox="alanprarie"> 
+            <img src="/assets/alanprarie.gif" alt="alanprarie" >
+        </a>
 
-            <a class="item" href="/assets/rockswater.jpg" data-lightbox="Rocky Ocean"> 
-                <img src="/assets/rockswater.jpg" alt="Rocky Ocean" >
-            </a>
-
-    </div>
+        <a class="item" href="/assets/rockswater.jpg" data-lightbox="Rocky Ocean"> 
+            <img src="/assets/rockswater.jpg" alt="Rocky Ocean" >
+        </a>
+</div>
 
 </br>
 </br>

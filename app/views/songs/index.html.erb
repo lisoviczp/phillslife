@@ -44,7 +44,7 @@ some of my all time favorite music
 			<% if song.approved %>
 				<div class="item">
 						<tr>
-							<th> <%= song.title %></th>
+							<th> <span class="signature"> <%= song.title %> </span> </th>
 							<th> <%= song.body %>  </th>
 	<!-- 					<th> <% link_to 'listen', song_path(song) %> </th> -->
 							<th> <%= link_to image_tag("glyphicons-77-headphones.png"), song_path(song) %> </th>
