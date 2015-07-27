@@ -24,14 +24,21 @@
   <link href="css/lightbox.css" rel="stylesheet" />
   <link href='http://fonts.googleapis.com/css?family=Bad+Script|Englebert|Delius|Loved+by+the+King|Over+the+Rainbow' rel='stylesheet' type='text/css'>
 
+<script>
+window.onload = function(){
+  var $container = $('#container');
 
-<!-- lightview -->
-<!-- <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/prototype/1.7.0/prototype.js'></script>
-<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/scriptaculous/1/scriptaculous.js'></script>
-<script type='text/javascript' src='/js/lightview.js'></script>
-<link rel="stylesheet" type="text/css" href="css/lightview.css" /> -->
+  $container.imagesLoaded( function() {
+    $container.masonry({
+      itemSelector: '.item'
+    });
+
+    $container.masonry('reload');
+  });
+}
 
 
+</script>
 
 
   <link rel="shortcut icon" href="/assets/faviconPL.ico" type="image/x-icon" />
@@ -39,6 +46,10 @@
 </head>
 
 <body>
+
+
+<link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
   <div class="nav">
     <ul>

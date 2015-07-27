@@ -11,14 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require lightbox
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
 
-$(document).ready(function() {
-
+$(document).on('page:load', function() {
 	var $container = $('#container');
 
 	$container.imagesLoaded( function() {
@@ -28,6 +28,24 @@ $(document).ready(function() {
 
 		$container.masonry('reload');
 	});
+});
+
+window.onload = function(){
+	// var $container = $('#container');
+
+	// $container.imagesLoaded( function() {
+	// 	$container.masonry({
+	// 		itemSelector: '.item'
+	// 	});
+
+	// 	$container.masonry('reload');
+	// });
+}
+
+
+$(document).ready(function() {
+
+
 
 	// $container.masonry('reload');
 
