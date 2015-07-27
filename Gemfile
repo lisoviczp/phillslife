@@ -46,6 +46,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'simple_form'
 gem 'devise'
 gem 'jquery-turbolinks'
+gem 'fancybox-rails'
 
 group :development do
 	gem 'pry-rails'

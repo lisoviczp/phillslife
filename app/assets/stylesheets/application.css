@@ -13,9 +13,10 @@
  *= require_tree .
  *= require_self
  *= require lightbox
+ *= require fancybox
+*/
 
 
-/*all CSS done by me :)*/
 body {
 	background-color: #cee2f8; 
 	padding-bottom: 20px;
@@ -350,6 +351,16 @@ footer {
 
 
 .item img {
+    width: 300px;
+    padding: .5em;
+}
+
+.fancybox img {
+    width: 300px;
+    padding: .5em;
+}
+
+.fancybox {
     width: 300px;
     padding: .5em;
 }

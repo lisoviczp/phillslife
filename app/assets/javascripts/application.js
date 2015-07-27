@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require fancybox
 //= require jquery.turbolinks
 //= require lightbox
 //= require jquery_ujs
@@ -23,10 +24,14 @@ $(document).on('page:load', function() {
 
 	$container.imagesLoaded( function() {
 		$container.masonry({
-			itemSelector: '.item'
+			itemSelector: '.fancybox'
 		});
 
 		$container.masonry('reload');
+	});
+
+	jQuery(function() {
+		$("a.fancybox").fancybox();
 	});
 });
 
