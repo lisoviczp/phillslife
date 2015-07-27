@@ -159,7 +159,8 @@ li {
 .nav {
   display: block;
   width: 60px;
-  font-family: helvetica;
+  /*font-family: helvetica;*/
+  font-family: 'Open Sans Condensed', sans-serif;
   position: fixed;
   top: 0;
   left:0;
@@ -378,6 +379,12 @@ footer {
 #container {
     padding: 2em;
     margin-bottom: 2em;
+    border: 1px solid ;
+    border-color: rgb(90,90,90);
+    box-shadow: 2px 2px 2px #888888;
+    background-color: white;
+    margin-top: 5em;
+    margin-bottom: 10em;
 }
 
 .pic-container {

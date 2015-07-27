@@ -2,30 +2,17 @@
 <html>
 
 <head>
-
     <style>
 
-    img {
-        /*max-width: 100%;*/
-    }
-    
-
     body {
-        /*background: url('/assets/bamboo.jpg');*/
         background: url('/assets/lightningstrike.jpg');
-        /*background: url('/assets/sanddune.jpg');*/
-        /*background: url('/assets/TexasStorm.jpg');*/
         background-attachment: fixed;
     }
-
-
 
     </style>
 
 </head>
-
 <body> 
-
 
 <script src="jquery-1.7.1.min.js"></script>
 <script src="jquery.masonry.min.js"></script>
@@ -36,19 +23,15 @@
 </br>
 
 <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
-<h1 id="title"> phills life </h1>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<h1 id="title"> phill's life </h1>
 
-<!-- <div class="">
-	<iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170106476&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-</div> -->
 
 <!-- disabling upload for now -->
 <h2 class="uploadImage"><% link_to 'upload', new_picture_path %></h2>
 
-<div class="mainForm1">
 
-
-<div id="container" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 320 }'>
+<div id="container">
 
             <% Picture.all.each do |pic| %>
                 <% if pic.approved==true %>
@@ -156,7 +139,6 @@
             </a>
 
     </div>
-</div>
 
 </br>
 </br>

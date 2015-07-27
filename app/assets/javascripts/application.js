@@ -18,14 +18,19 @@
 
 
 $(document).ready(function() {
-    $('.mainForm').show()
-    var container = document.querySelector('#container');
-    var msnry;
-    // initialize Masonry after all images have loaded
-    imagesLoaded( container, function() {
-      msnry = new Masonry( container );
-    });
-    // location.reload();
+
+	var $container = $('#container');
+
+	$container.imagesLoaded( function() {
+		$container.masonry({
+			itemSelector: '.item'
+		});
+
+		$container.masonry('reload');
+	});
+
+	// $container.masonry('reload');
+
 });
 
 
