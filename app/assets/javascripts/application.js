@@ -18,6 +18,10 @@
 //= require turbolinks
 //= require_tree .
 
+var fancybox = function() {
+	$(".fancybox").fancybox();
+};
+
 
 $(document).on('page:load', function() {
 	var $container = $('#container');
@@ -35,26 +39,43 @@ $(document).on('page:load', function() {
 	});
 });
 
+
+$(document).on("page:load ready", fancybox);
+
 window.onload = function(){
-	// var $container = $('#container');
+	var $container = $('#container');
 
-	// $container.imagesLoaded( function() {
-	// 	$container.masonry({
-	// 		itemSelector: '.item'
-	// 	});
+	$container.imagesLoaded( function() {
+		$container.masonry({
+			itemSelector: '.fancybox'
+		});
 
-	// 	$container.masonry('reload');
-	// });
+		$container.masonry('reload');
+	});
+
+	jQuery(function() {
+		$("a.fancybox").fancybox();
+	});
+
+
 }
 
+// window.onload = function(){
+// 	var $container = $('#container');
 
-$(document).ready(function() {
+// 	$container.imagesLoaded( function() {
+// 		$container.masonry({
+// 			itemSelector: '.item'
+// 		});
+
+// 		$container.masonry('reload');
+// 	});
+// }
 
 
-
-	// $container.masonry('reload');
-
-});
+// $(document).ready(function() {
+// 	$container.masonry('reload');
+// });
 
 
 // var fancybox = function(){
