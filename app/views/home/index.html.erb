@@ -32,7 +32,7 @@
 
 <div id="container">
 
-        <% @pictures.all.each do |pic| %>
+        <% @pictures.all.reverse.each do |pic| %>
             <% if pic.approved==true %>
                 <% if pic.vibeType == "2" %>
                     <div class="fancybox"> 
