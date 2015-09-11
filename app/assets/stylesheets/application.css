@@ -86,6 +86,15 @@ iframe {
 	padding: .5em;
 }
 
+.pagination {
+	position: absolute;
+	width: 20%;
+	left:40%;
+	color:white;
+	/*border: 1px solid gray;*/
+	/*background-color: white;*/
+	text-align: center;
+}
 
 .about-wrapper {
 

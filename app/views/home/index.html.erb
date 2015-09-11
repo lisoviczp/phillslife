@@ -28,10 +28,11 @@
 <!-- disabling upload for now -->
 <h2 class="uploadImage"><% link_to 'upload', new_picture_path %></h2>
 
+<%= will_paginate @pictures %>
 
 <div id="container">
 
-        <% Picture.all.each do |pic| %>
+        <% @pictures.all.each do |pic| %>
             <% if pic.approved==true %>
                 <% if pic.vibeType == "2" %>
                     <div class="fancybox"> 
@@ -51,90 +52,6 @@
             <% end %>
         <% end %>
 
-
-        <a class="fancybox" href="/assets/Durdle-Door-sunrise.jpg" data-lightbox="Durdle Door Sunrise"> 
-            <img src="/assets/Durdle-Door-sunrise.jpg" alt="Durdle Door Sunrise" >
-        </a>
-
-        <a class="fancybox" href="/assets/indoorpool.gif" data-lightbox="indoorpool"> 
-            <img src="/assets/indoorpool.gif" alt="indoorpool" >
-        </a>
-
-        <a class="fancybox" href="/assets/funnyseals.jpg" data-lightbox="funnyseals"> 
-            <img  src="/assets/funnyseals.jpg" alt="funnyseals" >
-        </a>
-
-        <a class="fancybox" href="/assets/panda.gif" data-lightbox="panda"> 
-            <img src="/assets/panda.gif" alt="panda"  >
-        </a>
-
-        <a class="fancybox" href="/assets/presidentfightclub.jpg" data-lightbox="presidentfightclub"> 
-            <img src="/assets/presidentfightclub.jpg" alt="presidentfightclub" >
-        </a>        
-
-        <a class="fancybox" href="/assets/3dgif.gif" data-lightbox="3dgif"> 
-            <img src="/assets/3dgif.gif" alt="3dgif"  >
-        </a>
-
-        <a class="fancybox" href="/assets/doghi.jpg" data-lightbox="doghi"> 
-            <img src="/assets/doghi.jpg" alt="doghi" width="350" >
-        </a>
-
-        <a class="fancybox" href="/assets/TexasStorm.jpg" data-lightbox="TexasStorm"> 
-            <img src="/assets/TexasStorm.jpg" alt="TexasStorm" width="350" >
-        </a>
-
-        <a class="fancybox" href="/assets/snowybench.gif" data-lightbox="snowybench"> 
-            <img src="/assets/snowybench.gif" alt="snowybench" width="350" >
-        </a>      
-
-        <a class="fancybox" href="/assets/italy.jpg" data-lightbox="Italy"> 
-            <img src="/assets/italy.jpg" alt="Italy Countryside" width="350" >
-        </a>  
-
-        <a class="fancybox" href="/assets/catgun.gif" data-lightbox="catgun"> 
-            <img src="/assets/catgun.gif" alt="catgun" width="350" >
-        </a>
-
-        <a class="fancybox" href="/assets/mtgongga.jpg" data-lightbox="lake"> 
-            <img src="/assets/mtgongga.jpg" alt="Mt Gongga" width="350" >
-        </a>
-
-        <a class="fancybox" href="/assets/colorado.jpg" data-lightbox="colorado"> 
-            <img src="/assets/colorado.jpg" alt="colorado" width="350" >
-        </a>
-
-        <a class="fancybox" href="/assets/coolhighway.jpg" data-lightbox="Cool Highway"> 
-            <img src="/assets/coolhighway.jpg" alt="Highway Architecture" width="350" >
-        </a>
-
-        <a class="fancybox" href="/assets/coolneon.gif" data-lightbox="coolneon"> 
-            <img src="/assets/coolneon.gif" alt="coolneon" width="350" >
-        </a>        
-
-        <a class="fancybox" href="/assets/irone throne.jpg" data-lightbox="Iron Throne"> 
-            <img src="/assets/irone throne.jpg" alt="Iron Throne" width="350" height="550" >
-        </a>
-
-        <a class="fancybox" href="/assets/iceland1.jpg" data-lightbox="Iceland"> 
-            <img src="/assets/iceland1.jpg" alt="Iceland Glaciers" width="350" >
-        </a>
-
-        <a class="fancybox" href="/assets/scotland.jpg" data-lightbox="Scotland"> 
-            <img src="/assets/scotland.jpg" alt="Scotland" width="350" >
-        </a>
-
-        <a class="fancybox" href="/assets/kuala.jpg" data-lightbox="Kuala Lampur"> 
-            <img src="/assets/kuala.jpg" alt="Kuala Lampur" >
-        </a>
-
-        <a class="fancybox" href="/assets/alanprarie.gif" data-lightbox="alanprarie"> 
-            <img src="/assets/alanprarie.gif" alt="alanprarie" >
-        </a>
-
-        <a class="fancybox" href="/assets/rockswater.jpg" data-lightbox="Rocky Ocean"> 
-            <img src="/assets/rockswater.jpg" alt="Rocky Ocean" >
-        </a>
 </div>
 
 </br>

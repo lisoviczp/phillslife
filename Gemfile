@@ -47,6 +47,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'jquery-turbolinks'
 gem 'fancybox-rails'
+gem 'will_paginate', '~> 3.0.6'
 
 group :development do
 	gem 'pry-rails'
@@ -58,5 +59,6 @@ group :production do
 	gem 'pg'
 	gem 'rails_12factor'
 end
+
 
 
