@@ -1,34 +1,29 @@
 <script src="jquery-1.7.1.min.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+
 <script src="jquery.masonry.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
 <script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
 
-<% @pictures.reverse.each do |pic| %>
-    <% if pic.approved==true %>
-	    <% if pic.vibeType == "2" %>
-	        <div class="fancybox"> 
-	            <iframe width="300" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
-	        </div>
-	    <% elsif pic.vibeType == "3" %>
-	        <div class="fancybox"> 
-	            <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
-	        </div>
-	    <% else %>
-	        <div class="fancybox">
-	            <a width="300" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
-	                <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
-	            </a>
-	        </div>
-	    <% end %>
+<div id="picture-container" data-masonry-options='{ "itemSelector": "", "columnWidth": 320 }'>
+	<% @pictures.reverse.each do |pic| %>
+	    <% if pic.approved==true %>
+	    	<%= pic.title %>
+		    <% if pic.vibeType == "2" %>
+		        <div class="fancybox"> 
+		            <iframe width="300" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
+		        </div>
+		    <% elsif pic.vibeType == "3" %>
+		        <div class="fancybox"> 
+		            <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
+		        </div>
+		    <% else %>
+		        <div class="fancybox">
+		            <a width="300" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
+		                <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
+		            </a>
+		        </div>
+		    <% end %>
+		<% end %>
 	<% end %>
-<% end %>
-
-
-<!-- 
-<% @pictures.reverse.each do |picture| %>
-	<div class="picture">
-	  <h2><% picture.title %></h2>
-	  <p><% picture.body %></p>
-	</div>
-<% end %>
- -->
+</div>

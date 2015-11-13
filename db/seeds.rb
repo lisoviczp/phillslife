@@ -85,5 +85,17 @@ ActiveRecord::Base.transaction do  #if at any point it fails, don't add anything
     status: "essential"
   )
 
+  (1..100).each do |i|
+    Picture.create!(title: "Lipsum Post #{i}", 
+      image_file_name: "devilstower.jpg", 
+      image_content_type: "image/jpeg",
+      approved: true, 
+      vibeType: "1", 
+      body: "nope", 
+      url: "nope", 
+      uid: "nope"
+    )
+  end
+
 end
 
