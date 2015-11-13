@@ -1,2 +1,88 @@
 $('#pictures').append("<%= escape_javascript render 'pictures' %>");
 $('.pagination').replaceWith("<%= escape_javascript will_paginate @pictures %>");
+
+
+function initializeInfiniteScroll() {
+$(window).scroll(function() {
+  if (shouldScroll() && !requestInProcess) {
+    currentPage++;
+    requestInProcess = $.ajax({
+      type: 'GET',
+      url: 'pictures/page/' + currentPage,
+      complete: function() { requestInProcess = null; },
+      success: function(results) {
+        appendResults(results)
+      }
+    });
+  }
+});
+}
+
+function shouldScroll() {
+	return $(window).scrollTop() + $(window).height() > $(document).height() - 300;
+}
+
+function appendResults(results) {
+	var $results = $(results).filter('div');
+	$container().append($results);
+	$container().masonry('appended', $results);
+}
+
+
+
+// Phillslife = (function() {
+//   var itemSelector  = '.picture',
+//       currentPage   = 1,
+//       requestInProcess;
+
+//   function $container() { return $('.pictures'); }
+
+//   function initializeMasonry() {
+//     $container().masonry({
+//       columnWidth: 300,
+//       itemSelector: itemSelector,
+//       gutter: 15,
+//       isFitWidth: true,
+//       transitionDuration: 0
+//     });
+//   }
+
+//   function initializeInfiniteScroll() {
+//     $(window).scroll(function() {
+//       if (shouldScroll() && !requestInProcess) {
+//         currentPage++;
+//         requestInProcess = $.ajax({
+//           type: 'GET',
+//           url: 'pictures/page/' + currentPage,
+//           complete: function() { requestInProcess = null; },
+//           success: function(results) {
+//             appendResults(results)
+//           }
+//         });
+//       }
+//     });
+//   }
+
+//   function shouldScroll() {
+//     return $(window).scrollTop() + $(window).height() > $(document).height() - 700;
+//   }
+
+//   function appendResults(results) {
+//     var $results = $(results).filter('div');
+//     $container().append($results);
+//     $container().masonry('appended', $results);
+//   }
+
+//   return {
+//     attach: function() {
+//       if ($('.picture').length === 1) { return };
+
+//       initializeMasonry();
+//       initializeInfiniteScroll();
+//     }
+//   }
+// })();
+
+// $(document).ready(function() {
+//   Phillslife.attach();
+// });
