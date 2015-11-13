@@ -1,0 +1,31 @@
+
+
+<% @pictures.reverse.each do |pic| %>
+    <% if pic.approved==true %>
+	    <% if pic.vibeType == "2" %>
+	        <div class="fancybox"> 
+	            <iframe width="300" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
+	        </div>
+	    <% elsif pic.vibeType == "3" %>
+	        <div class="fancybox"> 
+	            <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
+	        </div>
+	    <% else %>
+	        <div class="fancybox">
+	            <a width="300" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
+	                <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
+	            </a>
+	        </div>
+	    <% end %>
+	<% end %>
+<% end %>
+
+
+<!-- 
+<% @pictures.reverse.each do |picture| %>
+	<div class="picture">
+	  <h2><% picture.title %></h2>
+	  <p><% picture.body %></p>
+	</div>
+<% end %>
+ -->

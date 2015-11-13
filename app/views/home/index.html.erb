@@ -28,31 +28,15 @@
 <!-- disabling upload for now -->
 <h2 class="uploadImage"><% link_to 'upload', new_picture_path %></h2>
 
-<%= will_paginate @pictures %>
 
 <div id="container">
-
-        <% @pictures.all.reverse.each do |pic| %>
-            <% if pic.approved==true %>
-                <% if pic.vibeType == "2" %>
-                    <div class="fancybox"> 
-                        <iframe width="300" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
-                    </div>
-                <% elsif pic.vibeType == "3" %>
-                    <div class="fancybox"> 
-                        <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
-                    </div>
-                <% else %>
-                    <div class="fancybox">
-                        <a width="300" href=<%= "#{pic.image.url}" %> data-lightbox="#{pic.id}">
-                            <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
-                        </a>
-                    </div>
-                <% end %>
-            <% end %>
-        <% end %>
-
+    <div id="pictures">
+      <%= render 'pictures' %>
+    </div>
 </div>
+
+<%= will_paginate @pictures %>
+
 
 </br>
 </br>

@@ -1,0 +1,2 @@
+$('#pictures').append("<%= escape_javascript render 'pictures' %>");
+$('.pagination').replaceWith("<%= escape_javascript will_paginate @pictures %>");
