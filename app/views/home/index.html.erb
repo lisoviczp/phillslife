@@ -31,9 +31,11 @@
 
 
 <!-- <div id="container"> -->
+<div id="picture-container" data-masonry-options='{ "itemSelector": ".fancybox", "columnWidth": 320 }'>
     <div id="pictures">
       <%= render 'pictures' %>
     </div>
+</div>
 <!-- </div> -->
 
 <%= will_paginate @pictures %>
