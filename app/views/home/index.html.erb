@@ -5,7 +5,8 @@
     <style>
 
     body {
-        background: url('/assets/lightningstrike.jpg');
+        /*background: url('/assets/lightningstrike.jpg');*/
+        background-color: #365ebf;
         background-attachment: fixed;
     }
 
@@ -22,18 +23,18 @@
 
 </br>
 
-<h1 id="title"> phill's life </h1>
+<h1 id="title" style="color:"> phill's life </h1>
 
 
 <!-- disabling upload for now -->
 <h2 class="uploadImage"><% link_to 'upload', new_picture_path %></h2>
 
 
-<div id="container">
+<!-- <div id="container"> -->
     <div id="pictures">
       <%= render 'pictures' %>
     </div>
-</div>
+<!-- </div> -->
 
 <%= will_paginate @pictures %>
 
