@@ -18,11 +18,6 @@
 //= require turbolinks
 //= require_tree .
 
-var fancybox = function() {
-	$(".fancybox").fancybox();
-};
-
-
 $(document).on('page:load', function() {
 	var $container = $('#container');
 
@@ -31,31 +26,29 @@ $(document).on('page:load', function() {
 			itemSelector: '.fancybox'
 		});
 
-		$container.masonry('reload');
+		$container.masonry('reloadItems');
 	});
 
-	jQuery(function() {
-		$("a.fancybox").fancybox();
-	});
+	// jQuery(function() {
+	// 	$("a.fancybox").fancybox();
+	// });
 });
 
 
-$(document).on("page:load ready", fancybox);
+// $(document).on("page:load ready", fancybox);
 
 window.onload = function(){
-	var $container = $('#container');
+	var $container = $('#pictures');
 
 	$container.imagesLoaded( function() {
+		// alert("yello!");
 		$container.masonry({
 			itemSelector: '.fancybox'
 		});
 
-		$container.masonry('reload');
+		$container.masonry('reloadItems');
 	});
 
-	jQuery(function() {
-		$("a.fancybox").fancybox();
-	});
 }
 
 
@@ -65,11 +58,25 @@ $(document).ready(function() {
       var url = $('.pagination .next_page').attr('href');
       if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 300) {
         $('.pagination').text("Please Wait...");
-		$('#picture-container').masonry( 'reload' );
+		$('#picture-container').masonry( 'reloadItems' );
         return $.getScript(url);
       }
     });
     return $(window).scroll();
   }
 });
+
+$(window).load(function() {
+
+	var $container = $('#pictures');
+	$container.imagesLoaded( function() {
+		// alert("whaddduppp!");
+		$container.masonry({
+			itemSelector: '.fancybox'
+		});
+
+		$container.masonry('reloadItems');
+	});
+
+})
 

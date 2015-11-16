@@ -9,9 +9,9 @@
 
 
   <!-- #lightbox -->
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <script src="js/lightbox.min.js"></script>
-  <link href="css/lightbox.css" rel="stylesheet" />
+  <!-- // <script src="js/jquery-1.11.0.min.js"></script> -->
+  <!-- // <script src="js/lightbox.min.js"></script> -->
+  <!-- <link href="css/lightbox.css" rel="stylesheet" /> -->
   <link href='http://fonts.googleapis.com/css?family=Bad+Script|Englebert|Delius|Loved+by+the+King|Over+the+Rainbow' rel='stylesheet' type='text/css'>
   <!-- // <script src="/path/to/masonry.pkgd.min.js"></script> -->
 
@@ -28,7 +28,8 @@
 
   <div class="nav">
     <ul>
-      <li id="words"> <a href="http://www.phillslife.com"> test </a> </li>
+      <!-- <li id="words"> <a href="http://www.phillslife.com"> test </a> </li> -->
+      <li id="words"><%= link_to 'home', root_path %></li>
       <li id="words"><%= link_to 'music', songs_path %></li> 
       <li id="words"><%= link_to 'about', about_path %></li> 
       <li id="logo"><iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fphillslife&color=orange_transparent" style="width:60px;height: 38px; text-align: center; top: 0;"></iframe> </li>
@@ -45,6 +46,13 @@
 
 <%= yield %>
 
+<script>
+
+$(document).ready(function() {
+  alert("hello!");
+})
+
+</script>
 
 
 

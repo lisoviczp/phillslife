@@ -2,31 +2,31 @@ $('#pictures').append("<%= escape_javascript render 'pictures' %>");
 $('.pagination').replaceWith("<%= escape_javascript will_paginate @pictures %>");
 
 
-function initializeInfiniteScroll() {
-$(window).scroll(function() {
-  if (shouldScroll() && !requestInProcess) {
-    currentPage++;
-    requestInProcess = $.ajax({
-      type: 'GET',
-      url: 'pictures/page/' + currentPage,
-      complete: function() { requestInProcess = null; },
-      success: function(results) {
-        appendResults(results)
-      }
-    });
-  }
-});
-}
+// function initializeInfiniteScroll() {
+// $(window).scroll(function() {
+//   if (shouldScroll() && !requestInProcess) {
+//     currentPage++;
+//     requestInProcess = $.ajax({
+//       type: 'GET',
+//       url: 'pictures/page/' + currentPage,
+//       complete: function() { requestInProcess = null; },
+//       success: function(results) {
+//         appendResults(results)
+//       }
+//     });
+//   }
+// });
+// }
 
-function shouldScroll() {
-	return $(window).scrollTop() + $(window).height() > $(document).height() - 300;
-}
+// function shouldScroll() {
+// 	return $(window).scrollTop() + $(window).height() > $(document).height() - 300;
+// }
 
-function appendResults(results) {
-	var $results = $(results).filter('div');
-	$container().append($results);
-	$container().masonry('appended', $results);
-}
+// function appendResults(results) {
+// 	var $results = $(results).filter('div');
+// 	$container().append($results);
+// 	$container().masonry('appended', $results);
+// }
 
 
 
