@@ -94,6 +94,13 @@ iframe {
 	/*border: 1px solid gray;*/
 	/*background-color: white;*/
 	text-align: center;
+	display: none;
+}
+
+.pagination a {
+	display: none;
+	color:white;
+	text-align: center;
 }
 
 .about-wrapper {
