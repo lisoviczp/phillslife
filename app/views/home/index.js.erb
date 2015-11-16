@@ -1,5 +1,22 @@
-$('#pictures').append("<%= escape_javascript render 'pictures' %>");
-$('.pagination').replaceWith("<%= escape_javascript will_paginate @pictures %>");
+$(document).ready(function() {
+
+	$('#pictures').append("<%= escape_javascript render 'pictures' %>");
+	$('.pagination').replaceWith("<%= escape_javascript will_paginate @pictures %>");
+
+    var $container = $('#pictures');
+    $container.imagesLoaded( function() {
+        $container.masonry({
+            itemSelector: '.fancybox'
+        });
+        $container.masonry('reloadItems');
+        // alert("whassupppp");
+    });
+
+})
+
+
+
+
 
 
 // function initializeInfiniteScroll() {
