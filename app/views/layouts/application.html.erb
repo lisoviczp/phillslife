@@ -32,7 +32,7 @@
       <li id="words"><%= link_to 'home', root_path %></li>
       <li id="words"><%= link_to 'music', songs_path %></li> 
       <li id="words"><%= link_to 'about', about_path %></li> 
-      <li id="logo"><iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fphillslife&color=orange_transparent" style="width:60px;height: 38px; text-align: center; top: 0;"></iframe> </li>
+      <li id="logo"><iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fphillslife&color=orange_transparent" style="width:60px;height:38px; text-align: center;padding-top:0;"></iframe> </li>
       <% if user_signed_in? %>
         <li id="words-right"> <%= link_to 'sign out', destroy_user_session_path, method: :delete,  :confirm => 'Are you sure?'%> </li>
       <% else %>
