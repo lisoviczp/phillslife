@@ -3,7 +3,8 @@
 <style>
 
 body {
-    background: url('/assets/colorado.jpg');
+    background-color: #365ebf;
+    /*background: url('/assets/colorado.jpg');*/
     background-attachment: fixed;
 }
 
@@ -29,11 +30,11 @@ body {
                     </div>
                 <% else %>
                     <a class="pic" href=<%= "#{@picture.image.url}" %> data-lightbox="#{@picture.id}">
-                        <%= image_tag @picture.image.url, style: "width:50%; height:350;" %>
+                        <%= image_tag @picture.image.url, style: "width:50%; height:auto;" %>
                     </a>
                 <% end %>
             <% end %>
-            <div class="approve-box">
+<!--             <div class="approve-box">
                 <%= simple_form_for(@picture) do |f| %>
                     <table>
                         <tr>
@@ -43,7 +44,7 @@ body {
                         </tr>
                     </table>
                 <% end %>
-            </div>
+            </div> -->
 	</div>
 </div>
 
