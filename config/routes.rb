@@ -23,8 +23,15 @@ Rails.application.routes.draw do
   # get 'pictures' => 'home#index'
 
   get 'pictures/approve' => 'pictures#approve'
-  get 'pictures/approve/:id' => 'pictures#approve', as: 'pic_approve'
 
+
+
+  post 'pictures/approveThePic/:id' => 'pictures#approveThePic', as: 'approve_the_pic_post'
+  get 'pictures/approveThePic/:id' => 'pictures#approveThePic', as: 'approve_the_pic_get'
+
+
+
+  get 'pictures/approve/:id' => 'pictures#approve', as: 'pic_approve'
   root 'home#index'
 
   # map.resources :pictures, :collection => { :approved => :put }

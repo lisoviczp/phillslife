@@ -295,7 +295,7 @@ a:active {
   color: rgb(90,90,90);
 }
 
-.uploadImage {
+.uploadImage a{
 	color: white;
 }
 

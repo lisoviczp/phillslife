@@ -5,6 +5,7 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
+    redirect_to root_path
     @pictures = Picture.all
   end
 
@@ -84,6 +85,13 @@ class PicturesController < ApplicationController
     @picture.approvePicture
     # @picture.approved=true
     # redirect_to pictures_path    
+  end
+
+  def approveThePic 
+    @picture=Picture.find(params[:id])
+    @picture.approvePictureTrue
+    @picture.save
+    redirect_to pictures_path   
   end
 
 
