@@ -1,9 +1,19 @@
-<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
-<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+<head>
 
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
+	<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+</head>
+
+<style>
+	
+	.fancybox {
+		display:none;
+	}
+
+</style>
 
 <div id="picture-container" data-masonry-options='{ "itemSelector": ".fancybox", "columnWidth": 320 }'>
-	<% @pictures.reverse.each do |pic| %>
+	<% @pictures.each do |pic| %>
 	    <% if pic.approved==true %>
 		    <% if pic.vibeType == "2" %>
 		        <div class="fancybox"> 
@@ -36,13 +46,27 @@ function reload_masonry() {
 
 
 $(document).ready(function() {
-  $('#picture-container').masonry({
-    // options
-    itemSelector: '.fancybox',
-    columnWidth: 320
-  });
-  $('picture-container').append('.fancybox' ).masonry( 'appended', '.fancybox' );
+    var $container = $('#pictures');
+    $container.imagesLoaded( function() {
 
+        // alert("images are loaded");
+        $container.masonry({
+            itemSelector: '.fancybox'
+        });
+
+	    $('#picture-container').masonry({
+		    // options
+		  	itemSelector: '.fancybox',
+	    	columnWidth: 320
+		});
+
+        $container.masonry('reloadItems');
+		$('.fancybox').show();
+        
+    });
+
+	// $('#picture-container').append('.fancybox' ).masonry( 'appended', '.fancybox' );
 })
+
 
 </script>

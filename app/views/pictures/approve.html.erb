@@ -21,40 +21,26 @@ body {
 	<div class="pic-show-container-test">
 
 
-
-
 		<!-- soundcloud -->
 		<% if @picture.vibeType=="2" %>
-			<div class="pic"> 
-                <iframe width="50%" height="350" scrolling="no" frameborder="no" src="<%= @picture.getSrc.to_s %>" >
-                </iframe> 
+            <div class="pic"> 
+                <iframe width="50%" height="350" frameborder="0"src="<%= @picture.getSrc.to_s %>" allowfullscreen> </iframe> 
             </div>
-
 			<div class="approve-box">
-				<form action=<%= pictures_approve_path %> method="post">
-	<!-- 			<th> <% link_to image_tag("glyphicons-173-rewind.png"), pic_approve_path(@picture.id - 1)%> </th> -->
+				<form action=<%= approve_the_pic_post_path(@picture) %> method="post">
+					<input type="submit" value="approve"></input></br>
+					<!--<th> <% link_to image_tag("glyphicons-173-rewind.png"), pic_approve_path(@picture.id - 1)%> </th> -->
 			    	<!-- <th><%= f.check_box :approved %> </th> -->
-
-	<!-- 			<th> <% link_to image_tag("glyphicons-177-forward.png"), pic_approve_path(@picture.id + 1)%> </th> -->
-
-					<th> <%= f.submit 'approve pppost' %>  </th>
-					<input type="submit" value="yaa"> yaa </input>
+					<!--<th> <% link_to image_tag("glyphicons-177-forward.png"), pic_approve_path(@picture.id + 1)%> </th> -->
 					<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
 				</form>
 			</div>
-
-
-
-
-
-
 
 		<!-- youtube -->
 		<% elsif @picture.vibeType=="3" %>
             <div class="pic"> 
                 <iframe width="50%" height="350" frameborder="0"src="<%= @picture.getSrc.to_s %>" allowfullscreen> </iframe> 
             </div>
-
 			<div class="approve-box">
 				<form action=<%= approve_the_pic_post_path(@picture) %> method="post">
 					<input type="submit" value="approve"></input></br>
@@ -62,42 +48,16 @@ body {
 				</form>
 			</div>
 
-
-
-
-
-
-<!-- pictures -->
+		<!-- pictures -->
 		<% else %>
 			<div class="pic">
 				<%= image_tag @picture.image.url, style: "width:50%; height:350;" %>
 			</div>
-
 			<div class="approve-box">
-				<%= simple_form_for(@picture) do |f| %>
-					<table>
-						<tr>
-						    <!-- <th> <% link_to image_tag("glyphicons-173-rewind.png"), pic_approve_path(@picture.id - 1)%> </th> -->
-						    <th><%= f.check_box :approved %> </th>
-						    <!-- <th> <% link_to image_tag("glyphicons-177-forward.png"), pic_approve_path(@picture.id + 1)%> </th> -->
-						</tr>
-						<tr>
-							<th> </th>
-							<th> <%= f.submit 'approve post' %>  </th>
-							<th></th>
-						</tr>
-						<tr>
-							<th> </th>
-							<th> </th>
-							<th> </th>
-						</tr>
-						<tr>
-							<th> </th>
-							<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
-							<th></th>
-						</tr>
-					</table>
-				<% end %>
+				<form action=<%= approve_the_pic_post_path(@picture) %> method="post">
+					<input type="submit" value="approve"></input></br>
+					<th><%= link_to 'delete', picture_path(@picture, :id => @picture.id), method: :delete %> </th>
+				</form>
 			</div>
 		<% end %>
 	</div>

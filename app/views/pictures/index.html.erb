@@ -1,6 +1,3 @@
-<! DOCTYPE html >
-<html>
-
 <head>
 
   <script src="js/jquery-1.11.0.min.js"></script>
@@ -10,24 +7,14 @@
 
 </head>
 
-<body>
-
-
 <h3> submitted posts</h3>
-<!-- <button onclick="myFunction()">Reload page</button> -->
-
-<script>
-function myFunction() {
-    location.reload();
-}
-</script>
 
 
 <div class="mainForm" style="display:none;">
 
 	<div id="container" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 320 }'>
 
-		<% Picture.all.reverse.each do |pic| %>
+		<% Picture.all.each do |pic| %>
 			<% if pic.approved==true %>
                 <% if pic.vibeType == "2" %>
                     <div class="item"> 
