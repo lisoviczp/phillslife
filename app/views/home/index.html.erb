@@ -6,6 +6,10 @@
         background-attachment: fixed;
     }
 
+    .fancybox {
+    	display:none;
+    }
+
     </style>
 </head>
 
@@ -26,7 +30,6 @@
 	$(document).ready(function() {
 	    var $container = $('#pictures');
 	    $container.imagesLoaded( function() {
-
 	        // alert("images are loaded");
 		    $container.masonry({
 			    // options

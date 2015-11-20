@@ -1,8 +1,6 @@
 <head>
-
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
 	<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
-
 </head>
 
 <style>
@@ -39,64 +37,18 @@
 
 <script>
 
-
-
-// function reload_masonry() {
-// 	$('#picture-container').masonry( 'reload' );
-// }
-// $(document).ready(function() {
-// 	$('#pictures').masonry({
-// 	  itemSelector: '.fancybox',
-// 	  columnWidth: 320,
-// 	  layoutPriorities: {
-// 	    // Masonry default: Try to occupy highest available position.
-// 	    // Weight: Pixels of vertical distance from most upper spot.
-// 	    upperPosition: 1,
-// 	    // Shelf order: Try to display bricks in original order.
-// 	    //   (increases ordered-ness, decreases space-efficiency)
-// 	    // Weight: Pixels of distance of current brick's top left corner
-// 	    //         from previous brick's top right corner.
-// 	    shelfOrder: 1
-// 	  }
-// 	});
-
-// })
-
-
 $(document).ready(function() {
     var $container = $('#pictures');
     $container.imagesLoaded( function() {
-
         // alert("images are loaded");
+        setTimeout(1000);
 	    $container.masonry({
 		    // options
 		  	itemSelector: '.fancybox',
 	    	columnWidth: 320
 		});
-
-	 //    alert("layout?");
-		// $container.masonry({
-		//   itemSelector: '.fancybox',
-		//   columnWidth: 320,
-		//   layoutPriorities: {
-		//     // Masonry default: Try to occupy highest available position.
-		//     // Weight: Pixels of vertical distance from most upper spot.
-		//     upperPosition: 1,
-		//     // Shelf order: Try to display bricks in original order.
-		//     //   (increases ordered-ness, decreases space-efficiency)
-		//     // Weight: Pixels of distance of current brick's top left corner
-		//     //         from previous brick's top right corner.
-		//     shelfOrder: 1
-		//   }
-
-	    // alert("huhhh??");
-
-        $container.masonry('reloadItems');
-		$('.fancybox').show();
-        
+		$('.fancybox').show(); 
     });
-
-
 })
 
 
