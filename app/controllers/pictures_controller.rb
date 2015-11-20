@@ -94,6 +94,11 @@ class PicturesController < ApplicationController
     redirect_to pictures_path   
   end
 
+  def get_last_approve
+    @picture=Picture.last 
+    redirect_to pic_approve_path(@picture)
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

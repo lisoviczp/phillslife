@@ -14,8 +14,10 @@ body {
 <body>
 
 <br>
-<br>
-<br>
+
+<div id="some_link" style="text-align:center;color:white;margin-bottom:2em;">
+    <%= link_to 'last approved..', get_last_approve_path(@picture) %>
+</div>
 
 <div class="pic-container">
 	<div class="pic-show-container-test">

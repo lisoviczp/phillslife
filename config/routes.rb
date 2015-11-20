@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   # get 'pictures' => 'home#index'
 
   get 'pictures/approve' => 'pictures#approve'
-
+  get 'pictures/last_approve' => 'pictures#get_last_approve', as: 'get_last_approve'
 
 
   post 'pictures/approveThePic/:id' => 'pictures#approveThePic', as: 'approve_the_pic_post'
