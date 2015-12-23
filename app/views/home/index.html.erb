@@ -2,7 +2,8 @@
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
 	<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
-
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
+	
     <style>
     body {
         background-color: #365ebf;
@@ -35,10 +36,20 @@
 	$(document).ready(function() {
 	    var $container = $('#pictures');
 	    $container.imagesLoaded( function() {
+			$container.isotope({
+				// options...
+				itemSelector: '.fancybox',
+				sortBy: 'original-order',
+				// masonry: {
+				// 	columnWidth: 320
+				// }
+			});
+
 		    $container.masonry({
 			    // options
 			  	itemSelector: '.fancybox',
 		    	columnWidth: 320
+
 			});
 		});
 	});

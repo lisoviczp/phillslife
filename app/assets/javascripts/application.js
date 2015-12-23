@@ -15,6 +15,7 @@
 //= require jquery.turbolinks
 //= require lightbox
 //= require isotope/jquery.isotope
+//= require isotope.pkgd
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
