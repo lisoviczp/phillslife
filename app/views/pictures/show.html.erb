@@ -8,6 +8,10 @@ body {
     background-attachment: fixed;
 }
 
+#some_link a {
+    color: #365ebf;
+}
+
 </style>
 </head>
 
@@ -15,7 +19,7 @@ body {
 
 <br>
 
-<div id="some_link" style="text-align:center;color:white;margin-bottom:2em;">
+<div id="some_link" style="text-align:center;color:#365ebf;margin-bottom:2em;">
     <%= link_to 'last approved..', get_last_approve_path(@picture) %>
 </div>
 

@@ -15,7 +15,7 @@
 
 body {
   /*background: url('/assets/bamboo.jpg');*/
-  background: url('/assets/lightningstrike.jpg');
+  background: url('/assets/icelandbeach.jpg');
   background-attachment: fixed;
 }
 
@@ -50,7 +50,7 @@ body {
 
         <div class="new-picture">
           <div class="field">          
-            Type: <%= f.select :vibeType, [['image', 1], ['soundcloud', 2], ['youtube', 3]] %> </br>
+            Type: <%= f.select :vibeType, ['image', 'soundcloud', 'youtube'] %> </br>
           </div>
 
           <div class="field">
@@ -58,7 +58,7 @@ body {
           </div>
 
           <div class="field">
-            <%= f.text_field :title %> <!-- , placeholder: 'name it' %> -->
+            <%= f.text_field :title, placeholder: 'name it' %>
           </div>
           
           <div class="field">
@@ -66,7 +66,7 @@ body {
           </div>
 
           <div class="field">
-            URL: <%= f.text_field :url %></br>
+            URL: <%= f.text_field :url, placeholder: 'soundcloud/youtube link' %></br>
           </div>
 
           <div class="actions">

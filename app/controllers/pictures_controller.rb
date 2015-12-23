@@ -24,18 +24,21 @@ class PicturesController < ApplicationController
   def edit
   end
 
+
+# <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/209353721&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
   # POST /pictures
   # POST /pictures.json
   def create
     @picture = Picture.new(picture_params)
 
-    if @picture.vibeType == "2"
+    if @picture.vibeType == "soundcloud" or @picture.vibeType == "2" 
         start= 'content="soundcloud://sounds:'
         i = open(@picture.url).read.index(start)
         @picture.uid = open(@picture.url).read[i+29..i+37] 
-    elsif @picture.vibeType == "1"
+    elsif @picture.vibeType == "image" or @picture.vibeType == "1" 
       @picture.uid = @picture.url
-    elsif @picture.vibeType == "3"
+    elsif @picture.vibeType == "youtube" or @picture.vibeType == "3" 
       start = 'watch'
       i = @picture.url.index(start)
       pp = @picture.url[i, i+1]
