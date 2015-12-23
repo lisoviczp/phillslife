@@ -36,20 +36,19 @@
 	$(document).ready(function() {
 	    var $container = $('#pictures');
 	    $container.imagesLoaded( function() {
-			$container.isotope({
-				// options...
-				itemSelector: '.fancybox',
-				sortBy: 'original-order',
-				// masonry: {
-				// 	columnWidth: 320
-				// }
-			});
-
 		    $container.masonry({
 			    // options
 			  	itemSelector: '.fancybox',
 		    	columnWidth: 320
 
+			});
+			$container.isotope({
+				// options...
+				itemSelector: '.fancybox',
+				sortBy: 'original-order',
+				masonry: {
+					columnWidth: 320
+				}
 			});
 		});
 	});

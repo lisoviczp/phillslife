@@ -3,11 +3,20 @@ $(document).ready(function() {
 	$('#pictures').append("<%= escape_javascript render 'pictures' %>");
 	$('.pagination').replaceWith("<%= escape_javascript will_paginate @pictures %>");
 
-    var $container = $('#picture-container');   
+    var $container = $('#pictures');   
     $container.imagesLoaded( function() {
         $container.masonry({
-            itemSelector: '.fancybox'
+            itemSelector: '.fancybox',
+	    	columnWidth: 320    
         });
+		$container.isotope({
+			// options...
+			itemSelector: '.fancybox',
+			sortBy: 'original-order',
+			masonry: {
+				columnWidth: 320
+			}
+		});
         $container.masonry('reloadItems');
     });
 })
