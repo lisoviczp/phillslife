@@ -612,7 +612,7 @@
 .lv_controls_top_close_skin_light .lv_controls_top_close_button,
 .lv_thumbnails_skin_light .lv_thumbnail_icon {
   /*background-image: url('skins/light/sprite.png') !important;  */
-  /*background-image: url('skins/light/sprite_ie_lt_7.png'); /* IE < 7 */*/
+  /*background-image: url('skins/light/sprite_ie_lt_7.png'); /* IE < 7 */
 }
 
 
@@ -648,7 +648,7 @@
 .lv_controls_top_close_skin_dark .lv_controls_top_close_button,
 .lv_thumbnails_skin_dark .lv_thumbnail_icon {
   /*background-image: url('skins/dark/sprite.png') !important;*/
-  /*background-image: url('skins/dark/sprite_ie_lt_7.png'); /* IE < 7 */*/
+  /*background-image: url('skins/dark/sprite_ie_lt_7.png'); /* IE < 7 */
 }
 
 /* close button */
