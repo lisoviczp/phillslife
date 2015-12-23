@@ -1,4 +1,8 @@
 <head>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
+	<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+
     <style>
     body {
         background-color: #365ebf;
@@ -20,7 +24,9 @@
 
 
 <div id="pictures">
-  <%= render 'pictures' %>
+	<div id="picture-container" data-masonry-options='{ "itemSelector": ".fancybox", "columnWidth": 320 }'>
+		  <%= render 'pictures' %>
+	</div>
 </div>
 <%= will_paginate @pictures %>
 
