@@ -154,7 +154,7 @@
   margin: 0;
   overflow: auto; /* scrollbars */
   text-align: left;
-  /*background: url('skins/blank.gif'); /* Chrome 18+ opacity bug */*/
+  /*background: url('skins/blank.gif'); /* Chrome 18+ opacity bug */
 }
 
 .lv_measure_element {
