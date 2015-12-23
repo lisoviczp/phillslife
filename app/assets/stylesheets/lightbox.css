@@ -1,6 +1,6 @@
 /* Preload images */
 body:after {
-  content: url(/assets/close.png) url(/assets/loading.gif) url(/assets/prev.png) url(/assets/next.png);
+  /*content: url(/assets/close.png) url(/assets/loading.gif) url(/assets/prev.png) url(/assets/next.png);*/
   display: none;
 }
 
@@ -79,7 +79,7 @@ body:after {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  background: url(/assets/loading.gif) no-repeat;
+  /*background: url(/assets/loading.gif) no-repeat;*/
 }
 
 .lb-nav {

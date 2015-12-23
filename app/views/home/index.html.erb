@@ -1,7 +1,6 @@
 <head>
     <style>
     body {
-        /*background: url('/assets/lightningstrike.jpg');*/
         background-color: #365ebf;
         background-attachment: fixed;
     }
@@ -16,7 +15,7 @@
 <body> 
 </br>
 
-<h1 id="title" style="color:"> </h1>
+<h1 id="title" style="color:"> phill's life </h1>
 <h2 class="uploadImage"><%= link_to 'upload', new_picture_path %></h2>
 
 
@@ -29,7 +28,6 @@
 
 	$(document).ready(function() {
 	    var $container = $('#pictures');
-
 	    $container.imagesLoaded( function() {
 	        // alert("images are loaded");
 		    $container.masonry({
