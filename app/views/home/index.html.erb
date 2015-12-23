@@ -16,7 +16,7 @@
 <body> 
 </br>
 
-<h1 id="title" style="color:"> phill's life </h1>
+<h1 id="title" style="color:"> </h1>
 <h2 class="uploadImage"><%= link_to 'upload', new_picture_path %></h2>
 
 
@@ -29,6 +29,7 @@
 
 	$(document).ready(function() {
 	    var $container = $('#pictures');
+
 	    $container.imagesLoaded( function() {
 	        // alert("images are loaded");
 		    $container.masonry({
@@ -36,7 +37,7 @@
 			  	itemSelector: '.fancybox',
 		    	columnWidth: 320
 			});
-			$container.isotope({ sortBy: 'original-order' });
+			// $container.isotope({ sortBy: 'original-order' });
 		});
 	});
 

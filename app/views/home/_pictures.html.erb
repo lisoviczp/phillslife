@@ -1,6 +1,7 @@
 <head>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
 	<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+
 </head>
 
 <style>
@@ -12,15 +13,17 @@
 </style>
 
 <div id="picture-container" data-masonry-options='{ "itemSelector": ".fancybox", "columnWidth": 320 }'>
-	<% @pictures.each do |pic| %>
+	<% @pictures.reverse.each do |pic| %>
 	    <% if pic.approved==true %>
 		    <% if pic.vibeType == "2" %>
 		        <div class="fancybox"> 
 		            <iframe width="300" height="250" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
+		            <p class="sort_by_value" style="display:none;"> <%= pic.created_at %></p>
 		        </div>
 		    <% elsif pic.vibeType == "3" %>
 		        <div class="fancybox"> 
 		            <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" > </iframe> 
+		            <p class="sort_by_value" style="display:none;"> <%= pic.created_at %></p>
 		        </div>
 		    <% else %>
 		        <div class="fancybox">
@@ -28,6 +31,8 @@
 		                <img src=<%= "#{pic.image.url}" %> alt= <%= "#{pic.title}" %>  >
 		            </a> -->
 		            <%= link_to (image_tag pic.image.url), picture_path(pic) %>
+		            <p class="sort_by_value" style="display:none;"> <%= pic.created_at %></p>
+
 		        </div>
 		    <% end %>
 		<% end %>
@@ -39,6 +44,20 @@
 
 $(document).ready(function() {
     var $container = $('#pictures');
+
+	// var $grid = $('#picture-container').isotope({
+	// 	itemSelector: '.fancybox',
+	// 	layoutMode: 'fitRows',
+	// 	getSortData: {
+	// 	  value: '.sort_by_value',
+	// 	  weight: function( itemElem ) {
+	// 	    var weight = $( itemElem ).find('.sort_by_value').text();
+	// 	    return parseFloat( weight.replace( /[\(\)]/g, '') );
+	// 	  }
+	// 	}
+	// });
+
+
     $container.imagesLoaded( function() {
         // alert("images are loaded");
         setTimeout(1000);
@@ -48,7 +67,8 @@ $(document).ready(function() {
 	    	columnWidth: 320
 		});
 		$('.fancybox').show(); 
-		$container.isotope({ sortBy: 'original-order' });	
+		// $container.isotope({ sortBy: 'original-order' });	    
+
     });
 })
 

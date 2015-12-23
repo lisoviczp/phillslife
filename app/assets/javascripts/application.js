@@ -14,6 +14,7 @@
 //= require fancybox
 //= require jquery.turbolinks
 //= require lightbox
+//= require isotope/jquery.isotope
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .

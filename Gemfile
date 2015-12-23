@@ -48,6 +48,7 @@ gem 'devise'
 gem 'jquery-turbolinks'
 gem 'fancybox-rails'
 gem 'will_paginate', '~> 3.0.6'
+gem 'masonry-rails'
 
 group :development do
 	gem 'pry-rails'

@@ -4,6 +4,7 @@ $(document).ready(function() {
 	$('.pagination').replaceWith("<%= escape_javascript will_paginate @pictures %>");
 
     var $container = $('#pictures');
+    // $container.isotope({ sortBy: 'original-order' });       
     $container.imagesLoaded( function() {
         $container.masonry({
             itemSelector: '.fancybox'
