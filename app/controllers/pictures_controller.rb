@@ -1,7 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
 
-
   # GET /pictures
   # GET /pictures.json
   def index
@@ -25,7 +24,9 @@ class PicturesController < ApplicationController
   end
 
 
-# <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/209353721&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+  # This was my first ever rails application, and I modified the "Pictures" model to encompass all types of media. 
+  # Rather than having 3 separate models for Pictures, Songs, or Videos, I have one Pictures model where you can choose 
+  # the "Type" of media it is. 
 
   # POST /pictures
   # POST /pictures.json
@@ -44,8 +45,6 @@ class PicturesController < ApplicationController
       pp = @picture.url[i, i+1]
       @picture.uid = pp[8,100]
     end
-
-
 
     respond_to do |format|
       if @picture.save

@@ -7,11 +7,11 @@
 
 		<% Picture.all.each do |pic| %>
 			<% if pic.approved==true %>
-                <% if pic.vibeType == "2" %>
+                <% if pic.vibeType == "2" or pic.vibeType == "soundcloud" %>
                     <div class="item"> 
                         <iframe width="300" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
                     </div>
-                <% elsif pic.vibeType == "3" %>
+                <% elsif pic.vibeType == "3" or pic.vibeType == "youtube"%>
                     <div class="item"> 
                         <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" allowfullscreen> </iframe> 
                     </div>

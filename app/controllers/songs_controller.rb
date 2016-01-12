@@ -1,6 +1,12 @@
 class SongsController < ApplicationController
+  
+  # This was my first ever rails application, and I modified the "Pictures" model to encompass all types of media. 
+  # Rather than having 3 separate models for Pictures, Songs, or Videos, I have one Pictures model where you can choose 
+  # the "Type" of media it is. 
+
   def index
-    @song = Picture.where(vibeType: "2")
+    @song = Picture.where(vibeType: ["2", "soundcloud"])
+    # pry
   end
 
   def show

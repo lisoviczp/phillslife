@@ -13,13 +13,12 @@ body {
 </head>
 
 <body>
-
 <br>
 
-
+<!-- If a random visitor uploads a picture, I need to be able to approve it before I want it on my site. This is kind of hacked together -->
+<!-- to assume that the visitor is not malicious, and won't go around looking for how to approve uploaded content -->
 <div class="pic-container">
 	<div class="pic-show-container-test">
-
 
 		<!-- soundcloud -->
 		<% if @picture.vibeType=="2" or @picture.vibeType == "soundcloud"  %>
