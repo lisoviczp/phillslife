@@ -5,7 +5,7 @@ class PicturesController < ApplicationController
   # GET /pictures.json
   def index
     redirect_to root_path
-    @pictures = Picture.all
+    @pictures = Picture.all.reverse
   end
 
   # GET /pictures/1
