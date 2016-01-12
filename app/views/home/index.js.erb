@@ -1,5 +1,6 @@
-$(document).ready(function() {
+// Implementing infinite scrolling and calling masonry again on the newly added pictures.
 
+$(document).ready(function() {
 	$('#pictures').append("<%= escape_javascript render 'pictures' %>");
 	$('.pagination').replaceWith("<%= escape_javascript will_paginate @pictures %>");
 

@@ -1,35 +1,18 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-
 <style>
 
-
-body {
-	background: url('/assets/icelandbeach.jpg');
-	background-size: 100%;
-	background-attachment: fixed;
-}
+	body {
+		background: url('/assets/icelandbeach.jpg');
+		background-size: 100%;
+		background-attachment: fixed;
+	}
 
 </style>
-
 </head>
 
 <body>
 
-<!-- <h1>all timers</h1> -->
-
-<div class="background_image">
-    <!-- <img src="/assets/Nantucket_Pan.JPG" alt="Nantucket" style="width:100%;height:400px;"> -->
-</div>
-
-<!-- <p class="firstTextPost">
-some of my all time favorite music
-</p>
- -->
 <br>
-
 <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
 
 <h1> vibes </h1>
@@ -48,7 +31,6 @@ some of my all time favorite music
 						<tr>
 							<th> <span class="signature"> <%= song.title %> </span> </th>
 							<th> <%= song.body %>  </th>
-	<!-- 					<th> <% link_to 'listen', song_path(song) %> </th> -->
 							<th> <%= link_to image_tag("glyphicons-77-headphones.png"), song_path(song) %> </th>
 						</tr>
 				</div>
@@ -57,11 +39,5 @@ some of my all time favorite music
 	</table>
 </div>
 
-
-
-</br>
-</br>
-</br>
 </body>
-
 </html>

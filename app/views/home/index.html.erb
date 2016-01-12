@@ -1,19 +1,18 @@
-<head>
+<!-- Main page: Uses masonry to dynamically layout the images/videos/songs -->
 
+<head>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
 	<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
-	
     <style>
-    body {
-        background-color: #365ebf;
-        background-attachment: fixed;
-    }
 
     .fancybox {
     	display:none;
     }
 
+    h1 {
+	    color: #365ebf;
+    }
     </style>
 </head>
 
@@ -21,9 +20,10 @@
 </br>
 
 <h1 id="title" style="color:"> phill's life </h1>
-<h2 class="uploadImage"><%= link_to 'upload', new_picture_path %></h2>
+<h2><%= link_to 'upload', new_picture_path %></h2>
 
-
+<!-- Use rails gem will_paginate to implemenet pagination / infinite scroll -->
+<!-- Rendering the _pictures.html.erb template -->
 <div id="pictures">
 	<div id="picture-container" data-masonry-options='{ "itemSelector": ".fancybox", "columnWidth": 320 }'>
 		  <%= render 'pictures' %>
@@ -31,8 +31,8 @@
 </div>
 <%= will_paginate @pictures %>
 
+<!-- Masonry Layout -->
 <script>
-
 	$(document).ready(function() {
 	    var $container = $('#pictures');
 	    $container.imagesLoaded( function() {

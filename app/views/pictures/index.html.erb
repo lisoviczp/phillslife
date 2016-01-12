@@ -1,14 +1,5 @@
-<head>
-
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <script src="js/lightbox.min.js"></script>
-  <link href="css/lightbox.css" rel="stylesheet" />
-
-
-</head>
-
+<!-- Replaced this page with the home/index.html.erb file -->
 <h3> submitted posts</h3>
-
 
 <div class="mainForm" style="display:none;">
 
@@ -42,12 +33,12 @@
 <script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
 <script>
 
-// $('.mainForm').hide()
 
 $(document).ready(function() {
     $('.mainForm').show()
     var container = document.querySelector('#container');
     var msnry;
+
     // initialize Masonry after all images have loaded
     imagesLoaded( container, function() {
       msnry = new Masonry( container );
