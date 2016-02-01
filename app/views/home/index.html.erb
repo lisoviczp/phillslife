@@ -22,21 +22,24 @@
 <h1 id="title" style="color:"> phill's life </h1>
 <h2><%= link_to 'upload', new_picture_path %></h2>
 
-<!-- Use rails gem will_paginate to implemenet pagination / infinite scroll -->
-<!-- Rendering the _pictures.html.erb template -->
-<div id="pictures">
-	<div id="picture-container" data-masonry-options='{ "itemSelector": ".fancybox", "columnWidth": 320 }'>
-		  <%= render 'pictures' %>
+<div id="container-fluid">
+
+	<!-- Use rails gem will_paginate to implemenet pagination / infinite scroll -->
+	<!-- Rendering the _pictures.html.erb template -->
+	<div id="pictures">
+		<div id="picture-container" data-masonry-options='{ "itemSelector": ".fancybox", "columnWidth": 320 }'>
+			  <%= render 'pictures' %>
+		</div>
 	</div>
-</div>
 <%= will_paginate @pictures %>
 
+</div>
 <!-- Masonry Layout -->
 <script>
 	$(document).ready(function() {
 	    var $container = $('#picture-container');
 	    $container.imagesLoaded( function() {
-	    	$container.isotope({ sortBy: 'original-order' })
+	    	$container.isotope({ itemSelector: '.fancybox', sortBy: 'original-order' })
 		    $container.masonry({
 			    // options
 			  	itemSelector: '.fancybox',

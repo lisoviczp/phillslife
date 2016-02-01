@@ -2,6 +2,7 @@
 <script>
 $(document).ready(function() {
     var $container = $('#picture-container');
+	$container.isotope({ itemSelector: '.fancybox', sortBy: 'original-order' })    
     $container.imagesLoaded( function() {
         // alert("images are loaded");
         setTimeout(1000);
@@ -16,16 +17,16 @@ $(document).ready(function() {
 })
 </script>
 
-<% @pictures.reverse.each do |pic| %>
+<% @pictures.each do |pic| %>
     <% if pic.approved==true %>
 	    <% if pic.vibeType == "2" or pic.vibeType == "soundcloud" %>
 	        <div class="fancybox"> 
-	            <iframe width="300" height="250" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
+	            <iframe width="320" height="250" scrolling="no" frameborder="no" src="<%= pic.getSrc.to_s %>" ></iframe> 
 	            <p class="sort_by_value" style="display:none;"> <%= pic.created_at %></p>
 	        </div>
 	    <% elsif pic.vibeType == "3" or pic.vibeType == "youtube" %>
 	        <div class="fancybox"> 
-	            <iframe width="300" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" > </iframe> 
+	            <iframe width="320" height="250" frameborder="0"src="<%= pic.getSrc.to_s %>" > </iframe> 
 	            <p class="sort_by_value" style="display:none;"> <%= pic.created_at %></p>
 	        </div>
 	    <% else %>

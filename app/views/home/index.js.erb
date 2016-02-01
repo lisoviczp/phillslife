@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     var $container = $('#pictures');   
     $container.imagesLoaded( function() {
-    	$container.isotope({ sortBy: 'original-order' })	
+    	$container.isotope({ itemSelector: '.fancybox', sortBy: 'original-order' })	
         $container.masonry({
             itemSelector: '.fancybox',
 	    	columnWidth: 320    

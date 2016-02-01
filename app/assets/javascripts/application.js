@@ -16,6 +16,7 @@
 //= require lightbox
 //= require isotope/jquery.isotope
 //= require isotope.pkgd
+//= require isotope.pkgd.min.js
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
